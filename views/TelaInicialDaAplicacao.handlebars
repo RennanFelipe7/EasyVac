@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang=”pt-br”>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Início</title>
+        <link rel="stylesheet" href="css/TelaInicialDaAplicacao.css">
+        <script src="JavaScript/script_TelaInicialDaAplicacao.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <img src="img/easyvac.png" alt="easyvacMenor" class="easyvacMenor">
+            <button class="botaoSair" title="Sair" id="idBotaoSair" onclick="location.href = '/Sair';"><p>Sair</p></button>
+        </header>
+        <div name="porcentagemDeVacinasTomadas" class="porCentVacinasTomadas">
+                    <p class="porcentagem">{{pocentagemTomada}}%</p>
+                    <p class="nome">{{nome}}, você possui {{pocentagemTomada}}% das vacinas aplicadas indicada para a sua faixa etária.</p>
+        </div>
+        <div class="help">
+            <div class="importanciaVac">
+                <p for="" class="importanciaDaVacinacao">Importância da vacinação:</p>
+                <button class="exibeInformacoesDaVacina"  id="bt1">O que são vacinas? <img src="img/expandir.png" alt="seta de expandir" class="imagemDeDentroDoBotao" id="expandir" title="Expandir"></button>
+
+                <button class="exibeInformacoesDaVacina"  id="bt2">Como a vacina atua no nosso organismo?<img src="img/expandir.png" alt="seta de expandir" class="imagemDeDentroDoBotao" id="expandir2" title="Expandir"></button>
+                <button class="exibeInformacoesDaVacina"  id="bt3">Por que a vacinação é importante?<img src="img/expandir.png" alt="seta de expandir" class="imagemDeDentroDoBotao" id="expandir3" title="Expandir"></button>
+            
+                <button class="exibeInformacoesDaVacina"  id="bt4">As vacinas realmente podem erradicar doenças?<img src="img/expandir.png" alt="seta de expandir" class="imagemDeDentroDoBotao" id="expandir4" title="Expandir"></button>
+                
+            </div>
+
+            <div class="oQueSaoVacinas" id="container">
+                <p class="textAreaOqueSaoVacinas" name="informacaoVacinas"
+                >As vacinas são agentes imunizadores usados na prevenção de uma série de doenças. São produzidas utilizando-se o próprio organismo causador da doença ou seus derivados, que serão responsáveis por desencadear em nosso corpo uma resposta imunológica.</p>
+                <button class="fechar" id="fechar_id">Fechar</button> 
+            </div>
+             <div class="comoAtua" id="container2">
+                <p class="textAreaComoAtua" name="comoAtua" id=""
+                >As vacinas protegem o organismo de doenças ao estimular o sistema imunológico a produzir anticorpos para lutar contra certos vírus e bactérias. Elas funcionam expondo o corpo humano ao micro-organismo causador da doença de maneira segura, de modo que o sistema imunológico seja capaz de produzir anticorpos sem ficar doente.</p>
+                <button class="fechar" id="fechar_id2">Fechar</button>
+            </div>
+            <div class="porqueEImportante" id="container3">
+                <p class="textAreaPorqueEImportante" name="PqImportante" id="" 
+                >A vacinação é a forma mais eficaz na prevenção de doenças. É muito melhor, fácil e barato prevenir do que tratar uma possível doença, e é justamente por isso que é muito importante manter a vacinação em dia. A vacinação protege a pessoa que toma e também a comunidade ao redor, pois diminui a chance de contágio até para aqueles que não tomaram a vacina.</p>
+                <button class="fechar" id="fechar_id3">Fechar</button>
+            </div>
+            <div class="podeErradircar" id="container4">
+                <p class="textAreaPodeErradicar" name="Erradircar" id="" 
+                >Esse simples ato pode ainda ajudar a erradicar uma doença do mundo, como é o caso da Varíola, onde o último caso registrado da doença aconteceu em 1977.</p>
+                <button class="fechar" id="fechar_id4">Fechar</button>
+            </div>
+        </div>
+        <div class="menuDeNavegacao" id="tt">
+            <nav>
+                <ul class="listaDeIcones">
+                    <li><button class="botaoDeMenuInferior" onclick="location.href='/TelaInicialDaAplicacao'"><img src="img/home.png" alt="home" title="Início" class="imgDeNavegacao"></button><div class="separa"></div><p class="descBotao" onclick="location.href='/TelaInicialDaAplicacao'">Início</p></li>
+                    <li><button class="botaoDeMenuInferior" onclick="location.href='/CadernetaDeVacinacao'"><img src="img/verificaVacina.png" alt="Verifica Vacina" title="Caderneta" class="imgDeNavegacao"></button><div class="separa"></div><p class="descBotao" onclick="location.href='/CadernetaDeVacinacao'">Caderneta</p></li>
+                    <li><button class="botaoDeMenuInferior" onclick="location.href='/CalendarioDeVacinacao'"><img src="img/calendario.png" alt="calendario" title="Calendário" class="imgDeNavegacao"></button><div class="separa"></div><p class="descBotao" onclick="location.href='/CalendarioDeVacinacao'">Calendário</p></li>
+                    <li><button class="botaoDeMenuInferior" onclick="location.href='/Historico'"><img src="img/historico.png" alt="historico" title="Histórico" class="imgDeNavegacao"></button><div class="separa"></div><p class="descBotao" onclick="location.href='/Historico'">Histórico</p></li>
+                </ul>
+            </nav>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,91 @@
+body, html{
+    background: #e3e4e3; 
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+header{
+    height: 15%;
+    width: 100%;
+}
+.easyvacLogo{
+    margin-left: 19%; 
+    height: 100%;
+    width: 57%;
+}
+.ValidacaoEmail{
+    background-color: #06567b;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 60%;
+    border-radius: 5px;
+    margin-top: 10vmax;
+}
+.div1{
+    height: 20%;
+   
+}
+form{
+    height: 80%;
+}
+.div2{
+    height: 80%;
+    
+}
+.div3{
+    height: 20%;
+    
+}
+.informacao{
+    color: white;
+    font-size: clamp(2vw, 4vh, 4.5vw);
+    margin-left: 5%;
+    margin-right: 10%;
+    padding-top: 2vmin;
+    line-height: 2vmin;
+}
+.senha{
+    color: white;
+    display: block;
+    margin-left: 5%;
+    font-size: clamp(2vw, 4vh, 4.5vw);
+}
+.senhaConfirm{
+    color: white;
+    display: block;
+    margin-left: 5%;
+    font-size: clamp(2vw, 4vh, 4.5vw);
+    margin-top: 2%;
+    
+}
+.senhaInput{
+    margin-left: 5%;
+    margin-top: 1%;
+    height: 15%;
+    width: 60vmin;
+    display: block;
+}
+.AlterarSenha{
+    height: 70%;
+    width: 30vmin;
+    background-color: #FFA500;
+    color: rgb(0, 17, 255);
+    font-size: clamp(1.5vw, 3vh, 3vw);
+    cursor: pointer;
+    padding: 0%;
+    margin-left: 22vmin;
+}
+#senhasIguaisId{
+    color: white;
+    display: none;
+    margin-left: 5%;
+    font-weight: bold;
+    font-size: clamp(1.5vw, 2.5vh, 2.5vw);
+}
+#senhasMenor7Dig{
+    color: white;
+    display: none;
+    margin-left: 5%;
+    font-weight: bold;
+    font-size: clamp(1.5vw, 2.5vh, 2.5vw);
+}

@@ -1,0 +1,68 @@
+body, html{
+    background: #e3e4e3; 
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+header{
+    height: 15%;
+    width: 100%;
+}
+.easyvacLogo{
+    margin-left: 19%;
+    
+    height: 100%;
+    width: 57%;
+}
+.ValidacaoEmail{
+    background-color: #06567b;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 50%;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10vmax;
+}
+.div1{
+    height: 40%;
+}
+form{
+    height: 60%;
+}
+.informacao{
+    color: white;
+    font-size: clamp(1.5vw, 3.5vh, 4vw);
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 2vmin;
+    line-height: 2vmax;
+}
+.div2{
+    height: 70%;
+    overflow: auto;
+}
+.localEmail{
+    display: block;
+    width: 60%;
+    height: 30%;
+    margin-left: 20%;
+}
+.div3{
+    height: 30%;
+}
+.prosseguirRecuperacao{
+    height: 70%;
+    width: 30vmin;
+    background-color: #FFA500;
+    color: rgb(0, 17, 255);
+    font-size: clamp(1.5vw, 3vh, 3vw);
+    cursor: pointer;
+    padding: 0%;
+}
+.EmailDigitado{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: clamp(1vw, 2.7vh, 2.2vw);
+    margin: 1% 0% 0% 0%;
+    display: none;
+}

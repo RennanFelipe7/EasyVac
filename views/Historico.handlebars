@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang=”pt-br”>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         <link rel="stylesheet" href="css/Historico.css">
+        <script src="./JavaScript/script_Historico.js" defer></script>
+        <title>Histórico</title>
+    </head>
+
+    <body>
+        <header>
+            <img src="img/easyvac.png" alt="easyvacMenor" class="easyvacMenor">
+            <button class="botaoSair" title="Sair" id="idBotaoSair" onclick="location.href = '/Sair';"><p>Sair</p></button>
+        </header>
+        <div class="divHistoricoVacInf">
+            <label for="" class="historicoVacInf">Histórico de Vacinação <p class="ImpressaoEasyvac">: EasyVac</p></label>
+        </div>
+        <div class="divInfHistoricoVac">
+            <label for="" class="infHistoricoVac">Acompanhe o seu histórico de vacinas recebidas</label>
+        </div><br>
+        <div class="historicoVac">
+            <div class="nomeVacina">
+                BCG ID:
+            </div>
+            <div class="dataDaAplicacao">
+                {{dt_bcgDose1}}
+            </div><br>
+            <div class="nomeVacina">
+                BCG ID (Dose opcional):
+            </div>
+            <div class="dataDaAplicacao">
+                {{dt_bcgDose2}}
+            </div><br>
+            <div class="nomeVacina">
+                POLIOMIELITE DOSE 1:
+            </div>
+            <div class="dataDaAplicacao">
+                {{dt_poliomieliteDose1}}
+            </div><br>
+            <div class="nomeVacina">
+                POLIOMIELITE DOSE 2:
+            </div>
+            <div class="dataDaAplicacao">
+                {{dt_poliomieliteDose2}}
+            </div><br>
+            <div class="nomeVacina">
+                POLIOMIELITE DOSE 3:
+            </div>
+            <div class="dataDaAplicacao">
+                {{dt_poliomieliteDose3}}
+            </div><br>
+            <div class="nomeVacina">
+                POLIOMIELITE DOSE 4:
+            </div>
+            <div class="dataDaAplicacao">
+                {{dt_poliomieliteDose4}}
+            </div><br>
+            <div class="nomeVacina">
+                TETRA VALENTE DOSE 1:
+            </div>
+            <div class="dataDaAplicacao">
+                {{dt_tetraValenteDose1}}
+            </div><br>
+            <div class="nomeVacina" id="tetraDose2">
+                TETRA VALENTE DOSE 2:
+            </div>
+            <div class="dataDaAplicacao">
+                {{dt_tetraValenteDose2}}
+            </div><br>
+            <div class="nomeVacina">
+                TETRA VALENTE DOSE 3:
+            </div>
+            <div class="dataDaAplicacao">
+                {{dt_tetraValenteDose3}}
+            </div><br>
+            <div class="nomeVacina">
+                TETRA VALENTE DOSE 4:
+            </div>
+            <div class="dataDaAplicacao">
+                {{dt_tetraValenteDose4}}
+            </div><br>
+            <div class="nomeVacina">
+                TRÍPLICE VIRAL:
+            </div>
+            <div class="dataDaAplicacao">
+                {{dt_tripliceViral}}
+            </div><br>
+            <div class="nomeVacina">
+                HEPATITE B DOSE 1:
+            </div>
+            <div class="dataDaAplicacao">
+                {{dt_hepatiteBDose1}}
+            </div><br>
+            <div class="nomeVacina">
+                HEPATITE B DOSE 2:
+            </div>
+            <div class="dataDaAplicacao">
+                {{dt_hepatiteBDose2}}
+            </div><br>
+            <div class="nomeVacina">
+                HEPATITE B DOSE 3:
+            </div>
+            <div class="dataDaAplicacao">
+                {{dt_hepatiteBDose3}}
+            </div><br>
+            <div class="nomeVacina">
+                FEBRE AMARELA:
+            </div>
+            <div class="dataDaAplicacao">
+                {{dt_febreAmarelaDoseAtual}}
+            </div><br>
+            <div class="nomeVacina" id="duplaDose1Print">
+                DUPLA ADULTO DOSE 1:
+            </div>
+            <div class="dataDaAplicacao">
+                {{dt_duplaAdultoDose1}}
+            </div><br>
+            <div class="nomeVacina">
+                DUPLA ADULTO DOSE 2:
+            </div>
+            <div class="dataDaAplicacao">
+                {{dt_duplaAdultoDose2}}
+            </div><br>
+            <div class="nomeVacina">
+                DUPLA ADULTO DOSE 3:
+            </div>
+            <div class="dataDaAplicacao">
+                {{dt_duplaAdultoDose3}}
+            </div><br>
+            <div class="nomeVacina">
+                DUPLA ADULTO DOSE DE REFORÇO:
+            </div>
+            <div class="dataDaAplicacao">
+                {{dt_duplaAdultoDoseReforco}}
+            </div><br>
+            <div class="nomeVacina">
+                GRIPE:
+            </div>
+            <div class="dataDaAplicacao">
+                {{dt_gripe}}
+            </div><br>
+            <div class="nomeVacina">
+                PNEUMONIA DOSE 1:
+            </div>
+            <div class="dataDaAplicacao">
+                {{dt_pneumoniaDose1}}
+            </div><br>
+             <div class="nomeVacina">
+                PNEUMONIA DOSE 2:
+            </div>
+            <div class="dataDaAplicacao">
+                {{dt_pneumoniaDose2}}
+            </div><br>
+        </div>
+        <button class="imprimirHistorico" id="imprimirHistorico">Imprimir Histórico</button>
+        <div class="menuDeNavegacao" id="tt">
+            <nav>
+                <ul class="listaDeIcones">
+                    <li><button class="botaoDeMenuInferior" onclick="location.href='/TelaInicialDaAplicacao'"><img src="img/home.png" alt="home" title="Início" class="imgDeNavegacao"></button><div class="separa"></div><p class="descBotao" onclick="location.href='/TelaInicialDaAplicacao'">Início</p></li>
+                    <li><button class="botaoDeMenuInferior" onclick="location.href='/CadernetaDeVacinacao'"><img src="img/verificaVacina.png" alt="Verifica Vacina" title="Caderneta" class="imgDeNavegacao"></button><div class="separa"></div><p class="descBotao" onclick="location.href='/CadernetaDeVacinacao'">Caderneta</p></li>
+                    <li><button class="botaoDeMenuInferior" onclick="location.href='/CalendarioDeVacinacao'"><img src="img/calendario.png" alt="calendario" title="Calendário" class="imgDeNavegacao"></button><div class="separa"></div><p class="descBotao" onclick="location.href='/CalendarioDeVacinacao'">Calendário</p></li>
+                    <li><button class="botaoDeMenuInferior" onclick="location.href='/Historico'"><img src="img/historico.png" alt="historico" title="Histórico" class="imgDeNavegacao"></button><div class="separa"></div><p class="descBotao" onclick="location.href='/Historico'">Histórico</p></li>
+                </ul>
+            </nav>
+        </div>
+    </body>
+
+</html>

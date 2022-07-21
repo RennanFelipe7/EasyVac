@@ -1,0 +1,644 @@
+body{
+    background: #e3e4e3; 
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+}
+header{
+    background-color:#057fb7;
+    width: 100%;
+    height: 15vh;
+}
+.easyvacMenor{
+    margin-top: 2.5vh;
+    position: relative;
+    margin-left: 0%;
+    height: 80%;
+    width: 40%;
+}
+.botaoSair{
+    margin-top: 5vh;
+    width: 10vmax;
+    height: 40%;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    position: relative;
+    float: right;
+    align-items: center;
+    text-align: center;
+    font-size: calc(1vh + 1vw);
+    display: flex;
+    border: 0%;
+    padding: 0%;
+    letter-spacing: 0.5vw;
+}
+.botaoSair p{
+    font-weight: bold;
+    width: 100%;    
+}
+
+.cadernetaDiv{
+    text-align: center;
+    margin-top: 4vmax;
+}
+.cadernetaP{
+    color: #06159b;
+    font-size: clamp(2vw, 4.5vh, 4.5vw);
+    font-weight: bold;
+    margin: 0%;
+    padding: 0%;
+}
+.descricaoCadernetaP{ 
+    color: #686868;
+    font-size: 1.3vmax;
+    margin-top: 1vmax;
+    font-size: clamp(1.5vw, 2.5vh, 2.5vw);
+}
+.descricaoCaderneta{
+    margin-left: 20%;
+    margin-right: 19%;
+    word-spacing: 0.5vmax;
+    text-align: justify;
+    margin-top: 0%;
+}
+
+.selecAFaixaEtariaText{
+    font-weight: bold;
+    color: #057fb7;
+    margin-left: 38%;
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+
+.opcoesFaixaEtaria{
+    margin-left: 17%;
+}
+.botaoFaixaEtaria{
+    width: 110px;
+    height: 50px;
+    border-radius: 10px;
+    white-space: pre-wrap;
+    line-height: 10px;
+    background-color: #72b6d6;
+    font-weight: bold;
+    cursor: pointer;
+}
+.ulBotaoFaixaEtaria{
+    padding-left: 5px;
+}
+.divMarcaVacina{
+    position: relative;
+}
+
+.nomeVacinaBCG{
+    color: #057fb7;
+    font-weight: bold;
+    font-size: clamp(1.2vw, 3.6vh, 2.9vw);
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+.centraliza{
+    text-align: center;
+}
+.dosesBCG{
+    border-style: solid;
+    border-width: 5px;
+    border-color: #057fb7;
+    height: 0px;
+    transition: height 1s;
+    margin-top: 2vmax;
+}
+.escondeBCG{
+    display: none;
+}
+.setaBCG{
+    width: 4vmax;
+    height: 2vmax;
+    margin-left: calc(50% - 2vmax);
+    cursor: pointer;
+    border-width: 0.1vmax;
+    border-color: #057fb7;
+    padding: 0%;
+    background-color: white;
+}
+.setaBCG img{
+    width: 40%; 
+    margin: auto;
+    display: block;
+    max-width: 100%;
+}
+
+.nomeVacinaPOLIOMIELITE{
+    margin-top: 2vmax;
+    color: #057fb7;
+    font-weight: bold;
+    font-size: clamp(1.2vw, 3.6vh, 2.9vw);
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+.dosesPolio{
+    border-style: solid;
+    border-width: 5px;
+    border-color: #057fb7;
+    height: 0px;
+    transition: height 1.5s;
+    margin-top: 2vmax;
+}
+.escondePolio{
+    display: none;
+}
+.setaPolio{
+    width: 4vmax;
+    height: 2vmax;
+    margin-left: calc(50% - 2vmax);
+    cursor: pointer;
+    border-width: 0.1vmax;
+    border-color: #057fb7;
+    padding: 0%;
+    background-color: white;
+}
+.setaPolio img{
+    width: 40%; 
+    margin: auto;
+    display: block;
+    max-width: 100%;
+}
+
+.nomeVacinaTETRAVALENTE{
+    margin-top: 2vmax;
+    color: #057fb7;
+    font-weight: bold;
+    font-size: clamp(1.2vw, 3.6vh, 2.9vw);
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+.dosesTetra{
+    border-style: solid;
+    border-width: 5px;
+    border-color: #057fb7;
+    height: 0px;
+    transition: height 1.5s;
+    margin-top: 2vmax;
+}
+.escondeTetra{
+    display: none;
+}
+.setaTetra{
+    width: 4vmax;
+    height: 2vmax;
+    margin-left: calc(50% - 2vmax);
+    cursor: pointer;
+    border-width: 0.1vmax;
+    border-color: #057fb7;
+    padding: 0%;
+    background-color: white;
+}
+.setaTetra img{
+    width: 40%; 
+    margin: auto;
+    display: block;
+    max-width: 100%;
+}
+
+.nomeVacinaTRIPLICEVIRAL{
+    margin-top: 2vmax;
+    color: #057fb7;
+    font-weight: bold;
+    font-size: clamp(1.2vw, 3.6vh, 2.9vw);
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+.dosesTriplice{
+    border-style: solid;
+    border-width: 5px;
+    border-color: #057fb7;
+    height: 0px;
+    transition: height 1s;
+    margin-top: 2vmax;
+}
+.escondeTriplice{
+    display: none;
+}
+.setaTriplice{
+    width: 4vmax;
+    height: 2vmax;
+    margin-left: calc(50% - 2vmax);
+    cursor: pointer;
+    border-width: 0.1vmax;
+    border-color: #057fb7;
+    padding: 0%;
+    background-color: white;
+}
+.setaTriplice img{
+    width: 40%; 
+    margin: auto;
+    display: block;
+    max-width: 100%;
+}
+
+.nomeVacinaHEPATITEB{ 
+    margin-top: 2vmax;
+    color: #057fb7;
+    font-weight: bold;
+    font-size: clamp(1.2vw, 3.6vh, 2.9vw);
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+.dosesHepB{
+    border-style: solid;
+    border-width: 5px;
+    border-color: #057fb7;
+    height: 0px;
+    transition: height 1.5s;
+    margin-top: 2vmax;
+}
+.escondeHepB{
+    display: none;
+}
+.setaHepB{
+    width: 4vmax;
+    height: 2vmax;
+    margin-left: calc(50% - 2vmax);
+    cursor: pointer;
+    border-width: 0.1vmax;
+    border-color: #057fb7;
+    padding: 0%;
+    background-color: white;
+}
+.setaHepB img{
+    width: 40%; 
+    margin: auto;
+    display: block;
+    max-width: 100%;
+}
+
+.nomeVacinaFEBREAMARELA{
+    color: #057fb7;
+    font-weight: bold;
+    font-size: clamp(1.2vw, 3.6vh, 2.9vw);
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 2vmax;
+}
+.dataDeReforço{
+    color: #064664;
+    font-weight: bold;
+    font-size: calc(1vh + 1vw);
+    display: block;
+    margin: 2.5vmin 0% 0% 1%;
+}
+.dosesFebre{
+    border-style: solid;
+    border-width: 5px;
+    border-color: #057fb7;
+    height: 0px;
+    transition: height 1.5s;
+    margin-top: 2vmax;
+}
+.escondeFebre{
+    display: none;
+}
+.setaFebre{
+    width: 4vmax;
+    height: 2vmax;
+    margin-left: calc(50% - 2vmax);
+    cursor: pointer;
+    border-width: 0.1vmax;
+    border-color: #057fb7;
+    padding: 0%;
+    background-color: white;
+}
+.setaFebre img{
+    width: 40%; 
+    margin: auto;
+    display: block;
+    max-width: 100%;
+}
+
+.nomeVacinaDUPLAADULTO{
+    color: #057fb7;
+    font-weight: bold;
+    font-size: clamp(1.2vw, 3.6vh, 2.9vw);
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 2vmax;
+}
+.dosesDupla{
+    border-style: solid;
+    border-width: 5px;
+    border-color: #057fb7;
+    height: 0px;
+    transition: height 1.5s;
+    margin-top: 2vmax;
+}
+.escondeDupla{
+    display: none;
+}
+.setaDupla{
+    width: 4vmax;
+    height: 2vmax;
+    margin-left: calc(50% - 2vmax);
+    cursor: pointer;
+    border-width: 0.1vmax;
+    border-color: #057fb7;
+    padding: 0%;
+    background-color: white;
+}
+.setaDupla img{
+    width: 40%; 
+    margin: auto;
+    display: block;
+    max-width: 100%;
+}
+
+.nomeVacinaGRIPE{ 
+    color: #057fb7;
+    font-weight: bold;
+    font-size: clamp(1.2vw, 3.6vh, 2.9vw);
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 2vmax;
+}
+.dosesGripe{
+    border-style: solid;
+    border-width: 5px;
+    border-color: #057fb7;
+    height: 0px;
+    transition: height 1.5s;
+    margin-top: 2vmax;
+}
+.escondeGripe{
+    display: none;
+}
+.setaGripe{
+    width: 4vmax;
+    height: 2vmax;
+    margin-left: calc(50% - 2vmax);
+    cursor: pointer;
+    border-width: 0.1vmax;
+    border-color: #057fb7;
+    padding: 0%;
+    background-color: white;
+}
+.setaGripe img{
+    width: 40%; 
+    margin: auto;
+    display: block;
+    max-width: 100%;
+}
+
+.nomeVacinaPNEUMONIA{
+    color: #057fb7;
+    font-weight: bold;
+    font-size: clamp(1.2vw, 3.6vh, 2.9vw);
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 2vmax;
+}
+.dosesPneu{
+    border-style: solid;
+    border-width: 5px;
+    border-color: #057fb7;
+    height: 0px;
+    transition: height 1.5s;
+    margin-top: 2vmax;
+}
+.escondePneu{
+    display: none;
+}
+.setaPneu{
+    width: 4vmax;
+    height: 2vmax;
+    margin-left: calc(50% - 2vmax);
+    cursor: pointer;
+    border-width: 0.1vmax;
+    border-color: #057fb7;
+    padding: 0%;
+    background-color: white;
+}
+.setaPneu img{
+    width: 40%; 
+    margin: auto;
+    display: block;
+    max-width: 100%;
+}
+
+.divDaVacina{
+    background-color:rgb(255, 255, 255);
+    height: 5vmax;
+    position: relative;
+    margin-top: 2vmin;
+    font-size: 0%;
+}
+
+.nomeDaVacina{
+    font-weight: bold;
+    color: #064664;
+    padding-top: 1.6vmin;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    margin: 0% 0% 0% 2%;
+    width: calc(96% - 8vmin - 2%);
+}
+.quantasDose{
+    margin-top: 0.4vmin;
+    color: #06159b;
+    margin-left: 2%;
+    font-size: clamp(0.8vw, 1vh, 1.5vw);
+    font-weight: bold;
+    width: 82%;
+}
+#respBCG{
+    font-size: clamp(1.2vw, 3.6vh, 2.2vw);
+}
+#respPolio{
+    font-size:  clamp(1.3vw, 3.2vh, 1.7vw);
+}
+#respTetra{
+    font-size: clamp(1vw, 2.9vh, 1.5vw);
+}
+#respTriplice{
+    font-size: clamp(0.8vw, 3vh, 1.7vw);
+}
+#respHepaB{
+    font-size: clamp(1.6vw, 3vh, 1.8vw);
+}
+#respFebre{
+    font-size:  clamp(1vw, 3vh, 1.6vw);
+}
+#respDupla{
+    font-size:  clamp(1vw, 3vh, 1.6vw);
+}
+#respGripe{
+    font-size: clamp(1vw, 3vh, 1.6vw);
+}
+#respPneu{
+    font-size: clamp(1vw, 3vh, 1.6vw);
+}
+
+.checkboxFake{
+    border-radius: 100px;
+    height: 4vmax; 
+    width: 4vmax;
+    float: right;
+    margin-top: 0.5vmax;
+    margin-right: 2%;
+    cursor: pointer;
+    border: solid 2px #057fb7;
+    background-color: red;
+}
+.formularioVacinas{
+    margin-left: 20%;
+    margin-right: 19%;
+}
+.botaoMarcaVacTomada{
+    float: right;
+    margin-right: 3%;
+    margin-top: -5vmin;
+    display: none;
+}
+.btEnviaVacinas{
+    margin-top: 7vh;
+    margin-left: 18.2vw;
+    width: 25vw;
+    height: 3.5vmax;
+    border-radius: 10px;
+    background-color: #11ff09;
+    font-weight: bold;
+    font-size: 2.5vmin;
+    color: white;
+    cursor: pointer;
+    padding: 0%;
+}
+
+li{
+    list-style-type: none;
+    display: inline-block;
+    height: 100%;
+    width: 13vw;
+    text-align: center;
+    margin-left: 5vw;
+}
+
+.listaDeIcones{
+    background-color: #057fb7;
+    border-radius: 10px 10px 0px 0px;
+    height: 100%;
+    padding: 0%;
+    margin: 0%;
+}
+.botaoDeMenuInferior{
+    background-color: #057fb7;
+    border-color: orange;
+    height: 60%;
+    margin-top: 3vh;
+    cursor: pointer;
+}
+.imgDeNavegacao{
+    height: 90%;
+    width: 90%;
+    margin-top: 0.5vmin;
+}
+.menuDeNavegacao{
+    margin-top: 3vh;
+    margin-left: 10%;
+    margin-right: 11%;
+    height: 17vh;
+}
+.menuDeNavegacao nav{
+    height: 100%;
+}
+.dataDeReforço{
+    font-size: clamp(1vw, 1.5vw, 3vw);
+    margin: 0%;
+}
+.divDataDeRef{
+    height: 4vmin;
+    display: flex;
+    align-items: center;
+    margin: 2vmin 0% 0% 2%;
+}
+
+.insereHorario{
+    background-color: #06567b;
+    height: 20vmax;
+    position: relative;
+    margin-top: 2vmin;
+    display: none;
+}
+.nomeHorario{
+    color: white;
+    text-align: center;
+    font-size: clamp(1.2vw, 3.6vh, 2.2vw);
+    height: 20%;
+    margin: 0%;
+}
+.nomeHorario p{
+    padding: 1% 0% 0% 0%;
+    margin: 0%;
+}
+.inputHorario{
+    height: 50%;
+    text-align: center;
+}
+.dataDeAplic{
+    height: 30%;
+    width: 80%;
+    margin-top: 3vmax;
+    font-size: clamp(1vw, 1vh, 1.5vw);
+}
+.btMarcaHorario{
+    height: 30%;
+    text-align: center;
+}
+.btMarcaHorario button{ 
+    height: 50%;
+    width: 30%;
+    font-size: clamp(1.5vw, 2vh, 2vw);
+    background-color: #FFA500;
+    color: #0526b7;
+    cursor: pointer;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(0.8) brightness(50%) sepia(100%) saturate(10000%) hue-rotate(240deg);
+    font-size: 4vmin;
+}
+
+.infbotaoMenu{
+    margin: 0% 0% 0% 0%;
+    padding: 0%;
+    height: calc(40% - 3vh);
+}
+.descBotao{
+    cursor: pointer;
+    color: orange;
+    font-weight: bold;
+    font-size: clamp(1.2vw, 2.5vh, 3vw);
+    padding-top: 0%;
+    margin: 0% 0% 0% 0%;
+}
+
+.separa{
+    height: 1%;
+}
+
+.dtInvalida{
+    color: rgb(255, 255, 255);
+    font-size: clamp(1.5vw, 2vh, 2vw);
+    margin: 0%;
+    padding: 0%;
+    display: none;
+}

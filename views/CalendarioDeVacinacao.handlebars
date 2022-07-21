@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang=”pt-br”>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Calendario de Vacinação</title>
+        <link rel="stylesheet" href="css/TelaCalendarioDeVacinacao.css">
+        <script src="JavaScript/script_CalendarioDeVacinacao.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <img src="img/easyvac.png" alt="easyvacMenor" class="easyvacMenor">
+            <button class="botaoSair" title="Sair" id="idBotaoSair" onclick="location.href = '/Sair';"><p>Sair</p></button>
+        </header>
+
+        <div class="divcalendVacInf">
+            <p for="" class="calendVacInf">Calendário de Vacinação</p>
+        </div>
+        <div class="divInfCalendVac">
+            <p for="" class="infCalendVac">Utilize o calendário para consultar as vacinas que devem ser aplicadas baseados em cada faixa etária, clique na faixa etaria para expandir todas as vacinas e depois clique em informações para obter informações da vacina.</p>
+        </div>
+        <p for="" class="selecAFaixaEtariaText">Selecione a faixa etária:</p>
+        <div class="opcoesFaixaEtaria">
+            <nav>    
+                <ul class="ulBotaoFaixaEtaria">
+                    <li><button class="botaoFaixaEtaria" id="botaoCrianca">Criança
+                        (0 - 10 anos)</button></li>
+                    <li><button class="botaoFaixaEtaria" id="botaoAdolecente">Adolecente 
+                        (11 - 19 anos)</button></li>
+                    <li><button class="botaoFaixaEtaria" id="botaoAdulto">Adulto 
+                        (20 - 59 anos)</button></li>
+                    <li><button class="botaoFaixaEtaria" id="botaoIdoso">Idoso 
+                        (+ 60 anos)</button></li>
+                </ul>
+            </nav>
+        </div>
+        <p class="vacinas">Vacinas:</p>
+        <div class="vacinasCriança" id="divVacCrianca">
+            <p class="idadeDeTomarCrianca">Ao nascer:</p>
+            <div class="listaVacinas">
+                <div class="BCG">
+                    <p class="nomeVac" id="respBCG">BCG ID</p>
+                    <label for="infVacButBCG" class="informacoesVacButNome">Informações</label>
+                    <button class="informacoesVacBut" id="infVacButBCG"><img src="img/aviso.png" alt="informações"></button>
+                    <p class="quantasDose">Dose única</p>
+                </div>
+                <div class="HepatiteB">
+                    <p class="nomeVac" id="respHepB">HEPATITE B</p>
+                    <label for="infVacButHEPA" class="informacoesVacButNome">Informações</label>
+                    <button class="informacoesVacBut" id="infVacButHEPA"><img src="img/aviso.png" alt="informações"></button>
+                    <p class="quantasDose">1° Dose</p>
+                </div>
+            </div>
+            <p class="idadeDeTomarCrianca">1° mês:</p>
+            <div class="HepatiteB">
+                <p class="nomeVac" id="respHepB">HEPATITE B</p>
+                <label for="infVacButHEPA2" class="informacoesVacButNome">Informações</label>
+                <button class="informacoesVacBut" id="infVacButHEPA2"><img src="img/aviso.png" alt="informações"></button>
+                <p class="quantasDose">2° Dose</p>
+            </div>
+            <p class="idadeDeTomarCrianca">2 meses:</p>
+            <div class="Poliomielite">
+                <p class="nomeVac" id="respPolio">POLIOMIELITE ( PARALISIA INFANTIL )</p>
+                <label for="infVacButPOLI1" class="informacoesVacButNome">Informações</label>
+                <button class="informacoesVacBut" id="infVacButPOLI1"><img src="img/aviso.png" alt="informações"></button>
+                <p class="quantasDose">1° Dose</p>
+            </div>
+            <div class="TetraValente">
+                <p class="nomeVac" id="respTetra">TETRAVALENTE ( DIFTERIA, TETANO, COQUELUCHE, MENINGITE )</p>
+                <label for="tetraValente1" class="informacoesVacButNome">Informações</label>
+                <button class="informacoesVacBut" id="tetraValente1"><img src="img/aviso.png" alt="informações"></button>
+                <p class="quantasDose">1° Dose</p>
+            </div>
+            <p class="idadeDeTomarCrianca">4 meses:</p>
+            <div class="Poliomielite">
+                <p class="nomeVac" id="respPolio">POLIOMIELITE ( PARALISIA INFANTIL )</p>
+                <label for="infVacButPOLI2" class="informacoesVacButNome">Informações</label>
+                <button class="informacoesVacBut" id="infVacButPOLI2"><img src="img/aviso.png" alt="informações"></button>
+                <p class="quantasDose">2° Dose</p>
+            </div>
+            <div class="TetraValente">
+                <p class="nomeVac" id="respTetra">TETRAVALENTE ( DIFTERIA, TETANO, COQUELUCHE, MENINGITE )</p>
+                <label for="tetraValente2" class="informacoesVacButNome">Informações</label>
+                <button class="informacoesVacBut" id="tetraValente2"><img src="img/aviso.png" alt="informações"></button>
+                <p class="quantasDose">2° Dose</p>
+            </div>
+            <p class="idadeDeTomarCrianca">6 meses:</p>
+            <div class="HepatiteB">
+                <p class="nomeVac" id="respHepB">HEPATITE B</p>
+                <label for="infVacButHEPA3" class="informacoesVacButNome">Informações</label>
+                <button class="informacoesVacBut" id="infVacButHEPA3"><img src="img/aviso.png" alt="informações"></button>
+                <p class="quantasDose">3° Dose</p>
+            </div>
+            <div class="Poliomielite">
+                <p class="nomeVac" id="respPolio">POLIOMIELITE ( PARALISIA INFANTIL )</p>
+                <label for="infVacButPOLI3" class="informacoesVacButNome">Informações</label>
+                <button class="informacoesVacBut" id="infVacButPOLI3"><img src="img/aviso.png" alt="informações"></button>
+                <p class="quantasDose">3° Dose</p>
+            </div>
+            <div class="TetraValente">
+                <p class="nomeVac" id="respTetra">TETRAVALENTE ( DIFTERIA, TETANO, COQUELUCHE, MENINGITE )</p>
+                <label for="tetraValente3" class="informacoesVacButNome">Informações</label>
+                <button class="informacoesVacBut" id="tetraValente3"><img src="img/aviso.png" alt="informações"></button>
+                <p class="quantasDose">3° Dose</p>
+            </div>
+            <div class="FebreAmarela">
+                <p class="nomeVac" id="respFebre">FEBRE AMARELA</p>
+                <label for="febreAmarela" class="informacoesVacButNome">Informações</label>
+                <button class="informacoesVacBut" id="febreAmarela"><img src="img/aviso.png" alt="informações"></button>
+                <p class="quantasDose">1° Dose</p>
+            </div>
+            <p class="idadeDeTomarCrianca">1 ano:</p>
+            <div class="TripliciViral">
+                <p class="nomeVac" id="respTriplice">TRIPLICI VIRAL ( SARAMPO, RUBÉOLA, CAXUMBA )</p>
+                <label for="infVacButTriViral" class="informacoesVacButNome">Informações</label>
+                <button class="informacoesVacBut" id="infVacButTriViral"><img src="img/aviso.png" alt="informações"></button>
+                <p class="quantasDose">1° Dose</p>
+            </div>
+            <p class="idadeDeTomarCrianca">1 ano e 3 meses:</p>
+            <div class="Poliomielite">
+                <p class="nomeVac" id="respPolio">POLIOMIELITE ( PARALISIA INFANTIL )</p>
+                <label for="infVacButPOLI4" class="informacoesVacButNome">Informações</label>
+                <button class="informacoesVacBut" id="infVacButPOLI4"><img src="img/aviso.png" alt="informações"></button>
+                <p class="quantasDose">4° Dose</p>
+            </div>
+            <div class="TetraValente">
+                <p class="nomeVac" id="respTetra">TETRAVALENTE ( DIFTERIA, TETANO, COQUELUCHE ) DTP</p>
+                <label for="tetraValente4" class="informacoesVacButNome">Informações</label>
+                <button class="informacoesVacBut" id="tetraValente4"><img src="img/aviso.png" alt="informações"></button>
+                <p class="quantasDose">4° Dose</p>
+            </div><br>
+        </div>
+        
+        <div class="vacinasAdolecente" id="divVacAdolecente">
+            <p class="idadeDeTomarAdolecente">11 - 19 anos:</p>
+            <div class="duplaAdulta">
+                <p class="nomeVac" id="respDuplaAdult">DUPLA ADULTA - DT ( DIFTERIA E TÉTANO )</p>
+                <label for="duplaAdultaId" class="informacoesVacButNome">Informações</label>
+                <button class="informacoesVacBut" id="duplaAdultaId"><img src="img/aviso.png" alt="informações"></button>
+                <p class="quantasDose">--</p>
+            </div>
+            <div class="febreAmarelaAdolecente">
+                <p class="nomeVac" id="respFebre">FEBRE AMARELA</p>
+                <label for="febreAmarelaAd" class="informacoesVacButNome">Informações</label>
+                <button class="informacoesVacBut" id="febreAmarelaAd"><img src="img/aviso.png" alt="informações"></button>
+                <p class="quantasDose">--</p>
+            </div>
+
+            <div class="hepatiteBAdolecente">
+                <p class="nomeVac" id="respHepB">HEPATITE B</p>
+                <label for="HepatiteBAd1" class="informacoesVacButNome">Informações</label>
+                <button class="informacoesVacBut" id="HepatiteBAd1"><img src="img/aviso.png" alt="informações"></button>
+                <p class="quantasDose">--</p>
+            </div>
+            <div class="duplaViral">
+                <p class="nomeVac" id="respDuplaViral">DUPLA VIRAL - SR ( SARAMPO, RUBÉOLA )</p>
+                <label for="duplaViral" class="informacoesVacButNome">Informações</label>
+                <button class="informacoesVacBut" id="duplaViral"><img src="img/aviso.png" alt="informações"></button>
+                <p class="quantasDose">--</p>
+            </div><br>
+        </div>
+        
+        <div class="vacinasAdulto" id="divVacAdulto">
+            <p class="idadeDeTomarHomens">Homens:</p>
+            <div class="duplalAdulto">
+                <p class="nomeVac" id="respDuplaAdult">DUPLA ADULTO - DT ( DIFTERIA, TÉTANO )</p>
+                <label for="duplaAdulta" class="informacoesVacButNome">Informações</label>
+                <button class="informacoesVacBut" id="duplaAdulta"><img src="img/aviso.png" alt="informações"></button>
+                <p class="quantasDose">--</p>
+            </div>
+            <div class="duplaViral">
+                <p class="nomeVac" id="respDuplaViral">DUPLA VIRAL - SR ( SARAMPO, RUBÉOLA )</p>
+                <label for="duplaViralAdulto" class="informacoesVacButNome">Informações</label>
+                <button class="informacoesVacBut" id="duplaViralAdulto"><img src="img/aviso.png" alt="informações"></button>
+                <p class="quantasDose">--</p>
+            </div>
+            <div class="febreAmarelaAdulto">
+                <p class="nomeVac" id="respFebre">FEBRE AMARELA</p>
+                <label for="febreAmarelaAdulto" class="informacoesVacButNome">Informações</label>
+                <button class="informacoesVacBut" id="febreAmarelaAdulto"><img src="img/aviso.png" alt="informações"></button>
+                <p class="quantasDose">--</p>
+            </div>
+            <p class="idadeDeTomarMulheres">Mulheres:</p>
+            <div class="duplalAdulto">
+                <p class="nomeVac" id="respDuplaAdult">DUPLA ADULTO - DT ( DIFTERIA, TÉTANO )</p>
+                <label for="duplaAdultaMulheres" class="informacoesVacButNome">Informações</label>
+                <button class="informacoesVacBut" id="duplaAdultaMulheres"><img src="img/aviso.png" alt="informações"></button>
+                <p class="quantasDose">--</p>
+            </div>
+            <div class="duplaViral">
+                <p class="nomeVac" id="respDuplaViral">DUPLA VIRAL - SR ( SARAMPO, RUBÉOLA )</p>
+                <label for="duplaViralMulheres" class="informacoesVacButNome">Informações</label>
+                <button class="informacoesVacBut" id="duplaViralMulheres"><img src="img/aviso.png" alt="informações"></button>
+                <p class="quantasDose">--</p>
+            </div>
+            <div class="febreAmarelaAdulto">
+                <p class="nomeVac" id="respFebre">FEBRE AMARELA</p>
+                <label for="febreAmarelaAdultoM" class="informacoesVacButNome">Informações</label>
+                <button class="informacoesVacBut" id="febreAmarelaAdultoM"><img src="img/aviso.png" alt="informações"></button>
+                <p class="quantasDose">--</p>
+            </div><br>
+        </div>
+        
+        <div class="vacinasIdoso" id="divVacIdoso">
+            <p class="idadeDeTomarIdoso">Idoso:</p>
+            <div class="influenza">
+                <p class="nomeVac" id="respGripe">GRIPE ( INFLUENZA )</p>
+                <label for="influenzaId" class="informacoesVacButNome">Informações</label>
+                <button class="informacoesVacBut" id="influenzaId"><img src="img/aviso.png" alt="informações"></button>
+                <p class="quantasDose">--</p>
+            </div>
+            <div class="pneumonia">
+                <p class="nomeVac" id="respPneuMonia">PNEUMONIA ( PNEUMOCOCO )</p>
+                <label for="pneumoniaId" class="informacoesVacButNome">Informações</label>
+                <button class="informacoesVacBut" id="pneumoniaId"><img src="img/aviso.png" alt="informações"></button>
+                <p class="quantasDose">--</p>
+            </div>
+            <div class="duplalAdulto">
+                <p class="nomeVac" id="respDuplaAdult">DUPLA ADULTO - DT ( DIFTERIA, TÉTANO )</p>
+                <label for="duplaAdultaIdoso" class="informacoesVacButNome">Informações</label>
+                <button class="informacoesVacBut" id="duplaAdultaIdoso"><img src="img/aviso.png" alt="informações"></button>
+                <p class="quantasDose">--</p>
+            </div><br>
+        </div>
+        <div id="invisivel"></div>
+        <div class="infBCG" id="infBcgID">
+            <p class="NomeVacina">Vacina: BCG ID</p>
+            <button title="Fechar" class="botaoFechar" id="botaoFecharInfVacBCG"><img src="img/fechar.png" alt="fechar"></button>
+            <p class="titulo">Como é aplicada?</p>
+            <p class="descricao">Por via intradérmica (injeção sob a pele) de preferência no braço direito. É necessária somente uma dose da vacina e o Ministério da Saúde recomenda uma dose de reforço de seis a dez anos.</p>
+            <p class="titulo">Quem deve tomar?</p>
+            <p class="descricao"> Todas as crianças.</p>
+            <p class="titulo">Quais os benefícios da vacina?</p>
+            <p class="descricao">Proteção contra as formas graves da tuberculose, doença contagiosa, produzida
+                por bactéria que atinge principalmente os pulmões e que, se não tratada, pode
+                provocar sérios problemas respiratórios, emagrecimento, fraqueza e até levar à
+                morte.
+                A tuberculose é transmitida de pessoa a pessoa pelo ar, por meio de tosse,
+                espirro ou fala. Os principais sintomas são febre ao final do dia, tosse, fraqueza,
+                cansaço e perda de peso.</p>
+        </div>
+        <div class="infHepatiteB" id="infHepatiteBId">
+            <p class="NomeVacina">Vacina: HEPATITE B</p>
+            <button title="Fechar" class="botaoFechar" id="botaoFecharInfVacHEPB"><img src="img/fechar.png" alt="fechar"></button>
+            <p class="titulo">Como é aplicada?</p>
+            <p class="descricao">Por injeção via intramuscular no vasto lateral da coxa (em crianças com menos de dois anos) ou na parte superior do braço – músculo deltóide (em crianças com mais de dois anos).</p>
+            <p class="titulo">Quem deve tomar?</p>
+            <p class="descricao">Todas as crianças.</p>
+            <p class="titulo">Quais os benefícios da vacina?</p>
+            <p class="descricao">Proteção contra Hepatite B, doença causada por um vírus e que provoca mal-estar,
+                febre baixa, dor de cabeça, fadiga, dor abdominal, náuseas, vômitos e aversão a
+                alguns alimentos. O doente fica com a pele amarelada. A Hepatite B é grave,
+                porque pode levar a uma infecção crônica (permanente) do fígado e, na idade
+                adulta, levar ao câncer de fígado.</p>
+        </div>
+        <div class="infPoliomielite" id="infPoliomieliteId">
+            <p class="NomeVacina">Vacina: POLIOMIELITE</p>
+            <button title="Fechar" class="botaoFechar" id="botaoFecharInfVacPoliomielite"><img src="img/fechar.png" alt="fechar"></button>
+            <p class="titulo">Como é aplicada?</p>
+            <p class="descricao">Por via oral. Em três doses, com intervalo de sessenta dias entre cada dose. Cada dose corresponde a duas gotas.</p>
+            <p class="titulo">Quem deve tomar?</p>
+            <p class="descricao">Todas as crianças menores de cinco anos, a partir de dois meses de idade.</p>
+            <p class="titulo">Quais os benefícios da vacina?</p>
+            <p class="descricao">Proteção contra a poliomielite ou paralisia infantil, doença contagiosa,
+                provocada por vírus e caracterizada por paralisia súbita geralmente nas pernas.
+                A transmissão ocorre pelo contato direto com pessoas ou contato com fezes de
+                pessoas contaminadas, ou ainda contato com água e alimentos contaminados.</p>
+            <p class="titulo">Informações adicionais:</p>
+            <p class="descricao">É preciso tomar um reforço aos quinze meses. No
+                Brasil, além disso, todas as crianças menores de cinco anos de idade devem
+                receber a vacina nos dias de Campanha Nacional de Vacinação contra a Poliomielite, 
+                independentemente de já estarem com suas vacinas em dia.</p>
+        </div>
+        <div class="infTetraValente" id="infTetraValenteId">
+            <p class="NomeVacina">Vacina: TETRAVALENTE</p>
+            <button title="Fechar" class="botaoFechar" id="botaoFecharInfVacTetraValente"><img src="img/fechar.png" alt="fechar"></button>
+            <p class="titulo">Como é aplicada?</p>
+            <p class="descricao">Por injeção via intramuscular no vasto lateral da coxa (em crianças com menos de
+                dois anos) ou na parte superior do braço – músculo deltóide (em crianças com
+                mais de dois anos). Em três doses, com intervalo de sessenta dias entre cada uma.</p>
+            <p class="titulo">Quem deve tomar?</p>
+            <p class="descricao">Todas as crianças.</p>
+            <p class="titulo">Quais os benefícios da vacina?</p>
+            <p class="descricao">Proteção contra a difteria, o tétano, a coqueluche e a Haemophilus influenzae do
+                tipo b, que causa um tipo de meningite.
+                <strong>A difteria</strong>  é causada por um bacilo, produtor de uma toxina difteria
+                (substância tóxica) que atinge as amídalas, a faringe, o
+                nariz e a pele, onde provoca placas branco-acinzentadas.
+                É transmitida, por meio de tosse ou espirro, de uma pessoa
+                contaminada para outra. 
+                <strong>O tétano</strong> é uma infecção, causada por uma toxina (substância tóxica)
+                produzida pelo bacilo tetânico, que entra no organismo por meio de
+                ferimentos ou lesões na pele (tétano acidental) ou pelo coto do
+                cordão umbilical (tétano neonatal ou mal dos sete dias) e atinge o
+                sistema nervoso central. Caracteriza-se por contrações e espasmos,
+                dificuldade em engolir e rigidez no pescoço. 
+                <strong>A coqueluche</strong>, também conhecida como tosse comprida, coqueluche
+                é uma doença infecciosa, que compromete o aparelho
+                respiratório (traquéia e brônquios) e se caracteriza por ataques
+                de tosse seca. É transmitida por tosse, espirro ou fala de uma
+                pessoa contaminada. Em crianças com menos de seis meses,
+                apresenta-se de forma mais grave e pode levar à morte. 
+                <strong>Haemophilus influenzae do tipo b</strong> é uma bactéria que
+                causa um tipo de meningite (inflamação das meninges,
+                membranas que envolvem o cérebro), sinusite e pneumonia.
+                A doença mais grave é a meningite, que tem início súbito,
+                com febre, dor de cabeça intensa, náusea, vômito e rigidez
+                da nuca (pescoço duro). A meningite é uma doença grave
+                e pode levar à morte.</p>
+            <p class="titulo">Informações adicionais:</p>
+            <p class="descricao">Aos quinze meses, é necessária uma dose de
+                reforço só com a DTP. A criança deverá receber ainda uma outra dose aos dez ou
+                onze anos com a vacina dupla adulto (difteria e tétano)</p>
+        </div>
+        <div class="infFebreAmarela" id="infFebreAmarelaId">
+            <p class="NomeVacina">Vacina: FEBRE AMARELA</p>
+            <button title="Fechar" class="botaoFechar" id="botaoFecharInfVacFebreAmarela"><img src="img/fechar.png" alt="fechar"></button>
+            <p class="titulo">Como é aplicada?</p>
+            <p class="descricao">Por injeção via subcutânea (sob a pele) na parte superior do braço – músculo
+                deltóide. Uma dose, com reforço a cada dez anos.</p>
+            <p class="titulo">Quem deve tomar?</p>
+            <p class="descricao">Crianças, a partir dos seis meses de idade,
+                em regiões endêmicas (onde há casos
+                da doença em humanos).
+                Em regiões onde há circulação
+                do vírus entre animais (macacos),
+                mas não em humanos, a vacina
+                deve ser dada aos nove ou seis meses
+                de idade. A vacina deve ser dada
+                ainda a todas as pessoas que
+                pretenderem viajar para locais
+                onde a febre amarela é endêmica.</p>
+            <p class="titulo">Quais os benefícios da vacina?</p>
+            <p class="descricao">Proteção contra a febre amarela, doença infecciosa, causada por um vírus
+                transmitido por vários tipos de mosquito. O Aedes aegypti pode transmitir a
+                febre amarela, causando a febre amarela urbana, o que, desde 1942, não
+                ocorre no Brasil. A forma da doença que ocorre no Brasil é a febre amarela
+                silvestre, que é transmitida pelos mosquitos Haemagogus e o Sabethes, em
+                regiões fora das cidades. É uma doença grave, que se caracteriza por febre
+                repentina, calafrios, dor de cabeça, náuseas e leva a sangramento no fígado, no
+                cérebro e nos rins, podendo, em muitos casos, causar a morte.</p>
+            <p class="titulo">Informações adicionais:</p>
+            <p class="descricao">Os adultos podem tomar
+                em qualquer idade. A vacina protege o organismo por apenas dez anos. Portanto,
+                é necessário tomar uma nova dose da vacina a cada dez anos.</p>
+        </div>
+        <div class="infTripliceViral" id="infTripliceViralId">
+            <p class="NomeVacina">Vacina: TRIPLICI VIRAL</p>
+            <button title="Fechar" class="botaoFechar" id="botaoFecharInfVacTripliceViral"><img src="img/fechar.png" alt="fechar"></button>
+            <p class="titulo">Como é aplicada?</p>
+            <p class="descricao">Por injeção via subcutânea (sob a pele). Deve ser aplicada na parte superior do
+                braço – músculo deltóide. É necessária somente uma dose da vacina.</p>
+            <p class="titulo">Quem deve tomar?</p>
+            <p class="descricao">Todas as crianças.</p>
+            <p class="titulo">Quais os benefícios da vacina?</p>
+            <p class="descricao">Proteção contra o sarampo, a rubéola e a caxumba.
+                <strong>O sarampo</strong> é uma doença muito contagiosa, causada sarampo
+                por um vírus que provoca febre alta, tosse, coriza e
+                manchas avermelhadas pelo corpo. É transmitida de
+                pessoa a pessoa por tosse, espirro ou fala especialmente
+                em ambientes fechados. Facilita o aparecimento de
+                doenças como a pneumonia e diarréias e pode levar à
+                morte, principalmente em crianças pequenas. <strong>A rubéola</strong> é uma doença muito contagiosa, provocada por rubéola
+                um vírus que atinge principalmente crianças e provoca febre
+                e manchas vermelhas na pele, começando pelo rosto, couro
+                cabeludo e pescoço e se espalhando pelo tronco, braços e
+                pernas. É transmitida pelo contato direto com pessoas
+                contaminadas. <strong>A caxumba</strong> é uma doença viral, caracterizada por febre caxumba
+                e aumento de volume de uma ou mais glândulas
+                responsáveis pela produção de saliva na boca (parótida)
+                e, às vezes, de glândulas que ficam sob a língua ou a
+                mandíbula (sub-linguais e sub-mandibulares). O maior
+                perigo é a caxumba “descer”, isto é, causar inflamação
+                dos testículos principalmente em homens adultos, que podem
+                ficar sem poder ter filhos depois da infecção. Pode causar ainda inflamação dos
+                ovários nas mulheres e meningite viral. É transmitida pela tosse, espirro ou fala de
+                pessoas infectadas.</p>
+            <p class="titulo">Informações adicionais:</p>
+            <p class="descricao">É preciso tomar nos momentos em que ocorrerem as campanhas de
+                seguimento para vacinação contra o sarampo.</p>
+        </div>
+       
+        <div class="infFebreAmarelaAd" id="infFebreAmarelaAdId">
+            <p class="NomeVacina">Vacina: FEBRE AMARELA</p>
+            <button title="Fechar" class="botaoFechar" id="botaoFecharInfVacFebreAmarelaAd"><img src="img/fechar.png" alt="fechar"></button>
+            <p class="titulo">Como é aplicada?</p>
+            <p class="descricao">Por injeção via subcutânea (sob a pele) na parte superior do braço – músculo
+                deltóide. Uma dose, com reforço a cada dez anos.</p>
+            <p class="titulo">Quem deve tomar?</p>
+            <p class="descricao">Adolescentes em regiões endêmicas
+                (onde há casos da doença em
+                humanos) e em regiões onde há
+                circulação do vírus entre animais
+                (macacos).
+                A vacina deve ser dada
+                ainda a todas as pessoas que
+                pretenderem viajar para
+                locais onde a febre amarela
+                é endêmica. Veja, no mapa ao
+                lado, os estados onde a vacinação
+                contra a febre amarela é indicada.</p>
+            <p class="titulo">Quais os benefícios da vacina?</p>
+            <p class="descricao">Proteção contra a febre amarela, doença infecciosa, causada por um vírus
+                transmitido por vários tipos de mosquito. O Aedes aegypti pode transmitir a febre
+                amarela, causando a febre amarela urbana, o que, desde 1942, não ocorre no
+                Brasil. A forma da doença que ocorre no Brasil é a febre amarela silvestre, que é
+                transmitida pelos mosquitos Haemagogus e o Sabethes, em regiões fora das
+                cidades. É uma doença grave, que se caracteriza por febre repentina, calafrios,
+                dor de cabeça, náuseas e leva a sangramento no fígado, no cérebro e nos rins,
+                podendo, em muitos casos, causar a morte.</p>
+            <p class="titulo">Informações adicionais:</p>
+            <p class="descricao">É preciso tomar a qualquer momento. A vacina protege o organismo por apenas dez anos. Portanto,
+                é necessário tomar uma nova dose da vacina a cada dez anos.
+                Pessoas que vão viajar para áreas endêmicas devem tomar a vacina dez dias
+                antes da viagem.</p>
+        </div>
+        <div class="infHepatiteBAd" id="infHepatiteBAdId">
+            <p class="NomeVacina">Vacina: HEPATITE B</p>
+            <button title="Fechar" class="botaoFechar" id="botaoFecharInfVacHEPBAd"><img src="img/fechar.png" alt="fechar"></button>
+            <p class="titulo">Como é aplicada?</p>
+            <p class="descricao">Por via intramuscular no vasto lateral da coxa ou na parte superior do braço –
+                músculo deltóide.</p>
+            <p class="titulo">Quem deve tomar?</p>
+            <p class="descricao">Todos os adolescentes (até 19 anos) que não foram vacinados quando crianças.
+                Além disso, certos grupos específicos de maior risco:
+                pessoas com doenças crônicas do fígado,
+                pessoas que fazem hemodiálise,
+                pessoas que precisam receber muitas transfusões de sangue,
+                pessoas que têm hemofilia, talassemia,
+                pessoas que moram junto com quem tem hepatite B,
+                profissionais do sexo,
+                usuários de drogas,
+                pessoas infectadas pelo vírus HIV,
+                profissionais de saúde.</p>
+            <p class="titulo">Quais os benefícios da vacina?</p>
+            <p class="descricao">Proteção contra a Hepatite B, doença causada por um vírus e que provoca malestar, febre baixa, dor de cabeça, fadiga, dor abdominal, náuseas, vômitos e
+                aversão a alguns alimentos. O doente fica com a pele amarelada. A Hepatite B
+                é grave porque pode levar a uma infecção crônica (permanente) do fígado e, na
+                idade adulta, ao câncer de fígado.</p>
+            <p class="titulo">Informações adicionais:</p>
+            <p class="descricao">É preciso tomar a vacina a qualquer momento. A segunda dose deve ser dada trinta dias depois da
+                primeira. A terceira dose, seis meses após a primeira.</p>
+        </div>
+        <div class="infDuplaAdultoAdolecente" id="infDuplaAdultoAdolecenteId">
+            <p class="NomeVacina">Vacina: DUPLA ADULTO - DT</p>
+            <button title="Fechar" class="botaoFechar" id="botaoFecharInfVacDuplaAdultoAdolecente"><img src="img/fechar.png" alt="fechar"></button>
+            <p class="titulo">Como é aplicada?</p>
+            <p class="descricao">Por injeção via intramuscular na parte superior do braço – músculo deltóide –
+                ou no vasto lateral da coxa.</p>
+            <p class="titulo">Quem deve tomar?</p>
+            <p class="descricao">Todos os adolescentes</p>
+            <p class="titulo">Quais os benefícios da vacina?</p>
+            <p class="descricao">Proteção contra o tétano e a difteria.
+                <strong>A difteria</strong> é causada por um bacilo, produtor de uma toxina difteria
+                (substância tóxica) que atinge as amídalas, a faringe, o nariz e
+                a pele, onde provoca placas branco-acinzentadas. É transmitida,
+                por meio de tosse ou espirro, de uma pessoa contaminada
+                para outra.
+                <strong>O tétano</strong> é uma infecção, causada por uma toxina (substância tóxica) tétano
+                produzida pelo bacilo tetânico, que entra no organismo por meio de
+                ferimentos ou lesões na pele (tétano acidental) ou pelo coto do
+                cordão umbilical (tétano neonatal ou mal dos sete dias) e atinge
+                o sistema nervoso central. Caracteriza-se por contrações e
+                espasmos, dificuldade em engolir e rigidez no pescoço.</p>
+            <p class="titulo">Informações adicionais:</p>
+            <p class="descricao">Adolescentes que nunca tomaram a vacina podem tomar em qualquer idade.
+                Quem recebeu uma dose de dupla adulto aos dez ou onze anos precisa
+                receber apenas um reforço a cada dez anos.
+                Quem tomou a última dose há mais de dez anos precisa tomar uma dose de
+                reforço e não esquecer que, para fazer efeito por toda a vida, são necessárias
+                doses de reforço da vacina a cada dez anos.</p>
+        </div>
+        <div class="infDuplaViralAdolecente" id="infDuplaViralAdolecenteId">
+            <p class="NomeVacina">Vacina: DUPLA VIRAL - SR</p>
+            <button title="Fechar" class="botaoFechar" id="botaoFecharInfVacDuplaViralAdolecente"><img src="img/fechar.png" alt="fechar"></button>
+            <p class="titulo">Como é aplicada?</p>
+            <p class="descricao">Por injeção subcutânea na parte superior do braço – músculo deltóide.</p>
+            <p class="titulo">Quem deve tomar?</p>
+            <p class="descricao">Todos os adolescentes que não foram vacinados quando crianças, e, em especial,
+                estudantes e profissionais da área de saúde, profissionais de turismo e quem for
+                viajar para fora do país, uma vez que o sarampo ainda causa epidemias e é muito
+                comum em outros países do mundo.</p>
+            <p class="titulo">Quais os benefícios da vacina?</p>
+            <p class="descricao">Proteção contra o sarampo e a rubéola.
+                <strong>O sarampo</strong>é uma doença muito contagiosa, causada por
+                um vírus que provoca febre alta, tosse, coriza e manchas
+                avermelhadas pelo corpo. É transmitida por tosse, espirro
+                ou fala especialmente em ambientes fechados. Facilita o
+                aparecimento de doenças como a pneumonia e diarréias e
+                pode levar à morte principalmente em crianças pequenas.
+                <strong>A rubéola</strong> é uma doença muito contagiosa, provocada por um vírus rubéola
+                que atinge principalmente crianças e provoca febre e manchas
+                vermelhas na pele, começando pelo rosto, couro cabeludo e pescoço
+                e se espalhando pelo tronco, braços e pernas. É transmitida pelo
+                contato direto com pessoas contaminadas.</p>
+            <p class="titulo">Informações adicionais:</p>
+            <p class="descricao">É preciso tomar a vacina a qualquer momento. Só é necessária uma dose para proteção durante toda a
+                vida.</p>
+        </div>
+        
+        <div class="infDuplaAdultoAdulto" id="infDuplaAdultoAdultoId">
+            <p class="NomeVacina">Vacina: DUPLA ADULTO - DT </p>
+            <button title="Fechar" class="botaoFechar" id="botaoFecharInfVacDuplaAdultoAdulto"><img src="img/fechar.png" alt="fechar"></button>
+            <p class="titulo">Como é aplicada?</p>
+            <p class="descricao">Por injeção via intramuscular na parte superior do braço – músculo deltóide – ou
+                no vasto lateral da coxa.</p>
+            <p class="titulo">Quem deve tomar?</p>
+            <p class="descricao">Todos os adultos, de qualquer idade.</p>
+            <p class="titulo">Quais os benefícios da vacina?</p>
+            <p class="descricao">Proteção contra o tétano e a difteria.
+                <strong>A difteria</strong> é causada por um bacilo, produtor de uma toxina difteria
+                (substância tóxica) que atinge as amídalas, a faringe, o nariz e
+                a pele, onde provoca placas branco-acinzentadas. É transmitida,
+                por meio de tosse ou espirro, de uma pessoa contaminada
+                para outra.
+                <strong>O tétano</strong> é uma infecção, causada por uma toxina (substância tóxica) tétano
+                produzida pelo bacilo tetânico, que entra no organismo por meio de
+                ferimentos ou lesões na pele (tétano acidental) ou pelo coto do
+                cordão umbilical (tétano neonatal ou mal dos sete dias) e atinge
+                o sistema nervoso central. Caracteriza-se por contrações e
+                espasmos, dificuldade em engolir e rigidez no pescoço.</p>
+            <p class="titulo">Informações adicionais:</p>
+            <p class="descricao">Adultos que nunca tomaram a vacina podem tomar em qualquer idade.
+                Quem recebeu uma dose de dupla adulto aos dez ou onze anos precisam receber
+                apenas um reforço a cada dez anos.
+                Quem tomou a última dose há mais de dez anos precisa tomar uma dose de
+                reforço e não esquecer que, para fazer efeito por toda a vida, são necessárias
+                doses de reforço da vacina a cada dez anos.</p>
+        </div>
+        <div class="infDuplaViralAdulto" id="infDuplaViralAdultoId">
+            <p class="NomeVacina">Vacina: DUPLA VIRAL - SR</p>
+            <button title="Fechar" class="botaoFechar" id="botaoFecharInfVacDuplaViralAdulto"><img src="img/fechar.png" alt="fechar"></button>
+            <p class="titulo">Como é aplicada?</p>
+            <p class="descricao">Por injeção subcutânea na parte superior do braço – músculo deltóide.</p>
+            <p class="titulo">Quem deve tomar?</p>
+            <p class="descricao">Adultos homens de até trinta e nove anos. Após esta idade, o risco de a pessoa
+                pegar o sarampo é muito pequeno.
+                Em especial, devem ser vacinados os profissionais de saúde, os profissionais de
+                turismo e quem for viajar para fora do país, uma vez que o sarampo ainda causa
+                epidemias e é muito comum em outros países do mundo</p>
+            <p class="titulo">Quais os benefícios da vacina?</p>
+            <p class="descricao">Proteção contra o sarampo e a rubéola.
+                <strong>O sarampo</strong> é uma doença muito contagiosa, causada por
+                um vírus que provoca febre alta, tosse, coriza e manchas
+                avermelhadas pelo corpo. É transmitida de pessoa a pessoa
+                por tosse, espirro ou fala especialmente em ambientes fechados. Facilita o
+                aparecimento de doenças respiratórias como a pneumonia e diarréias e pode
+                levar à morte, principalmente em crianças pequenas.
+                <strong>A rubéola</strong> é uma doença muito contagiosa, provocada por um vírus rubéola
+                que atinge principalmente crianças e provoca febre e manchas
+                vermelhas na pele, começando pelo rosto, couro cabeludo e pescoço
+                e se espalhando pelo tronco, braços e pernas. É transmitida pelo
+                contato direto com pessoas contaminadas</p>
+            <p class="titulo">Informações adicionais:</p>
+            <p class="descricao">É preciso tomar a vacina a qualquer momento. Só é necessária uma dose para proteção durante toda a
+                vida.</p>
+        </div>
+        <div class="infFebreAmarelaAdulto" id="infFebreAmarelaAdultoId">
+            <p class="NomeVacina">Vacina: FEBRE AMARELA</p>
+            <button title="Fechar" class="botaoFechar" id="botaoFecharInfVacFebreAmarelaAdulto"><img src="img/fechar.png" alt="fechar"></button>
+            <p class="titulo">Como é aplicada?</p>
+            <p class="descricao">Por injeção subcutânea (sob a pele) na parte superior do braço – músculo
+                deltóide. Uma dose, com reforço a cada dez anos.</p>
+            <p class="titulo">Quem deve tomar?</p>
+            <p class="descricao">Adultos em regiões endêmicas (onde
+                há casos da doença em humanos) e
+                em regiões onde há circulação do
+                vírus entre animais (macacos).
+                A vacina deve ser dada
+                ainda a todas as pessoas
+                que pretendem viajar para
+                locais onde a febre amarela
+                é endêmica.</p>
+            <p class="titulo">Quais os benefícios da vacina?</p>
+            <p class="descricao">Proteção contra a febre amarela, doença infecciosa, causada por um vírus
+                transmitido por vários tipos de mosquito. O Aedes aegypti pode transmitir a
+                febre amarela, causando a febre amarela urbana, o que, desde 1942, não
+                ocorre no Brasil. A forma da doença que ocorre no Brasil é a febre amarela
+                silvestre, que é transmitida pelos mosquitos Haemagogus e o Sabethes, em
+                regiões fora das cidades. É uma doença grave, que se caracteriza por febre
+                repentina, calafrios, dor de cabeça, náuseas e leva a sangramento no fígado,
+                cérebro e nos rins podendo, em muitos casos, causar a morte.</p>
+            <p class="titulo">Informações adicionais:</p>
+            <p class="descricao"> É preciso tomar a qualquer momento. A vacina protege o organismo por apenas dez anos.
+                Portanto, é necessário tomar uma nova dose da vacina a cada dez anos.
+                Pessoas que vão viajar para áreas endêmicas devem tomar a vacina dez dias
+                antes da viagem.</p>
+        </div>
+        <div class="infDuplaAdultoAdultoMulheres" id="infDuplaAdultoAdultoMulheresId">
+            <p class="NomeVacina">Vacina: DUPLA ADULTO - DT</p>
+            <button title="Fechar" class="botaoFechar" id="botaoFecharInfVacDuplaAdultoAdultoMulheres"><img src="img/fechar.png" alt="fechar"></button>
+            <p class="titulo">Como é aplicada?</p>
+            <p class="descricao">Por injeção via intramuscular na parte superior do braço – músculo deltóide – ou no
+                vasto lateral da coxa.</p>
+            <p class="titulo">Quem deve tomar?</p>
+            <p class="descricao">Mulheres entre doze e quarenta e nove anos, independentemente de estarem grávidas
+                ou não.</p>
+            <p class="titulo">Quais os benefícios da vacina?</p>
+            <p class="descricao">Pode ser tomada quando a mulher estiver grávida, pois vários estudos já
+                provaram que a vacinação com dT na gravidez é segura e não causa danos
+                à mulher nem ao bebê. Ao contrário, protege contra o tétano neonatal
+                também conhecido como mal dos sete dias. A mesma vacina protege a
+                mulher contra o tétano em adultos. tétano em adultos
+                <strong>O tétano neonatal</strong> é uma infecção, causada por uma toxina (substância tóxica) do tétano neonatal
+                bacilo tetânico, que entra no organismo do bebê pelo coto do cordão umbilical e
+                atinge o sistema nervoso central. Caracteriza-se por dificuldade em mamar, contrações
+                e espasmos e leva o bebê à morte.</p>
+            <p class="titulo">Informações adicionais:</p>
+            <p class="descricao">Mulheres grávidas, que não estiverem com a vacina em dia, precisam receber pelo
+                menos duas doses da vacina durante a gravidez, sendo que a segunda dose deve ser
+                recebida pelo menos trinta dias antes do parto, para poder proteger o bebê contra o
+                tétano neonatal (mal dos sete dias). A última dose (terceira dose) deve ser tomada
+                após o parto, na primeira visita ao posto de saúde.
+                Quando a mulher grávida está com a vacina em dia, mas recebeu sua última dose há
+                mais de cinco anos, precisa tomar uma dose de reforço durante a gravidez.
+                Quando a mulher grávida está com a vacina em dia e a última dose foi há menos de
+                cinco anos, ela e o bebê estão completamente protegidos contra o tétano neonatal e
+                ela só precisa lembrar que, para a imunização ter efeito por toda a vida, são necessárias
+                doses de reforço da vacina a cada dez anos.</p>
+        </div>
+        <div class="infDuplaViralAdultoMulheres" id="infDuplaViralAdultoMulheresId">
+            <p class="NomeVacina">Vacina: DUPLA VIRAL - SR</p>
+            <button title="Fechar" class="botaoFechar" id="botaoFecharInfVacDuplaViralAdultoMulheres"><img src="img/fechar.png" alt="fechar"></button>
+            <p class="titulo">Como é aplicada?</p>
+            <p class="descricao">Por injeção subcutânea na parte superior do braço – músculo deltóide.</p>
+            <p class="titulo">Quem deve tomar?</p>
+            <p class="descricao">Mulheres, de doze a quarenta e nove anos, que não estejam grávidas.</p>
+            <p class="titulo">Quais os benefícios da vacina?</p>
+            <p class="descricao">Proteção contra a Síndrome da Rubéola Congênita (SRC). A síndrome ocorre no
+                bebê quando a mãe tiver rubéola durante a gravidez; é muito grave e pode
+                causar cegueira, surdez, retardamento e mal-formações no coração do bebê.
+                Pode também provocar abortos e mal-formações no feto.</p>
+            <p class="titulo">Informações adicionais:</p>
+            <p class="descricao">É preciso tomar a vacina o quanto antes, para as mulheres entre doze e quarenta e nove anos, que não
+                receberam a vacina contra o sarampo e a rubéola quando crianças ou durante
+                as campanhas de vacinação contra a rubéola em mulheres, nos anos de 2001 e
+                2002.</p>
+        </div>
+        <div class="infFebreAmarelaAdultoMulheres" id="infFebreAmarelaAdultoMulheresId">
+            <p class="NomeVacina">Vacina: FEBRE AMARELA</p>
+            <button title="Fechar" class="botaoFechar" id="botaoFecharInfVacFebreAmarelaAdultoMulheres"><img src="img/fechar.png" alt="fechar"></button>
+            <p class="titulo">Como é aplicada?</p>
+            <p class="descricao">Por injeção subcutânea (sob a pele) na parte superior do braço – músculo
+                deltóide. Uma dose, com reforço a cada dez anos.</p>
+            <p class="titulo">Quem deve tomar?</p>
+            <p class="descricao">Mulheres em regiões endêmicas
+                (onde há casos da doença em
+                humanos) e em regiões onde
+                há circulação do vírus entre
+                animais (macacos).
+                A vacina deve ser dada
+                ainda a todas as pessoas
+                que pretenderem viajar
+                para locais onde a febre
+                amarela é endêmica.</p>
+            <p class="titulo">Quais os benefícios da vacina?</p>
+            <p class="descricao">Proteção contra a febre amarela, doença infecciosa, causada por um vírus
+                transmitido por vários tipos de mosquito. O Aedes aegypti pode transmitir a
+                febre amarela, causando a febre amarela urbana, o que, desde 1942, não
+                ocorre no Brasil. A forma da doença que ocorre no Brasil é a febre amarela
+                silvestre, que é transmitida pelos mosquitos Haemagogus e o Sabethes, em
+                regiões fora das cidades. É uma doença grave, que se caracteriza por febre
+                repentina, calafrios, dor de cabeça, náuseas e leva a sangramento no fígado,
+                cérebro e nos rins, podendo, em muitos casos, causar a morte.</p>
+            <p class="titulo">Informações adicionais:</p>
+            <p class="descricao">É precios tomar a vacina a qualquer momento. A vacina protege o organismo por apenas dez anos.
+                Portanto, é necessário tomar uma nova dose da vacina a cada dez anos.
+                Pessoas que vão viajar para áreas endêmicas devem tomar a vacina dez dias
+                antes da viagem.</p>
+        </div>
+        <div class="infInfluenza" id="infInfluenzaId">
+            <p class="NomeVacina">Vacina: GRIPE</p>
+            <button title="Fechar" class="botaoFechar" id="botaoFecharInfVacInfluenza"><img src="img/fechar.png" alt="fechar"></button>
+            <p class="titulo">Como é aplicada?</p>
+            <p class="descricao">Por injeção via intramuscular na parte superior do braço – músculo deltóide.
+                Uma dose por ano.</p>
+            <p class="titulo">Quem deve tomar?</p>
+            <p class="descricao">Pessoas com mais de sessenta anos</p>
+            <p class="titulo">Quais os benefícios da vacina?</p>
+            <p class="descricao">Proteção contra a influenza ou gripe, doença caracterizada por febre alta,
+                calafrios, dor-de-cabeça, mal-estar, tosse seca e dor muscular, e que pode
+                gerar complicações como infecções respiratórias agudas. Estudos recentes
+                indicam que a vacina também protege contra infarto e derrame.
+                A vacina contra gripe não protege contra resfriados comuns, que são
+                causados por outros tipos de vírus e normalmente se caracterizam por
+                sintomas mais leves, sem febre.</p>
+            <p class="titulo">Informações adicionais:</p>
+            <p class="descricao">É preciso tomar a vacina uma vez por ano, no outono (abril/maio), quando acontece a campanha
+                nacional de vacinação do idoso</p>
+        </div>
+        <div class="infPneumonia" id="infPneumoniaId">
+            <p class="NomeVacina">Vacina: PNEUMONIA</p>
+            <button title="Fechar" class="botaoFechar" id="botaoFecharInfVacPneumonia"><img src="img/fechar.png" alt="fechar"></button>
+            <p class="titulo">Como é aplicada?</p>
+            <p class="descricao">Por injeção via intramuscular ou subcutânea na parte superior do braço. Em dose
+                única, e precisa de uma dose de reforço cinco anos após a primeira dose .</p>
+            <p class="titulo">Quem deve tomar?</p>
+            <p class="descricao">Pessoas com mais de sessenta anos que vivem em instituições fechadas como
+                asilos, hospitais e casas de repouso, por apresentarem mais riscos de contrair
+                pneumonias.</p>
+            <p class="titulo">Quais os benefícios da vacina?</p>
+            <p class="descricao">Proteção contra a pneumonia causada pelo pneumococo. A pneumonia é uma
+                infecção respiratória grave, que se caracteriza por febre, tosse com catarro, e, em
+                muitos casos, precisa de internação, podendo levar a pessoa à morte, se não
+                tratada adequadamente.</p>
+            <p class="titulo">Informações adicionais:</p>
+            <p class="descricao">É preciso tomar a vacina durante as campanhas de vacinação destinadas aos idosos, em abril/maio. Lembrar
+                que é preciso uma única dose de reforço cinco anos após a primeira dose.</p>
+        </div>
+        <div class="infDuplaAdultoIdoso" id="infDuplaAdultoIdosoId">
+            <p class="NomeVacina">Vacina: DUPLA ADULTA - DT</p>
+            <button title="Fechar" class="botaoFechar" id="botaoFecharInfVacDuplaAdultoIdoso"><img src="img/fechar.png" alt="fechar"></button>
+            <p class="titulo">Como é aplicada?</p>
+            <p class="descricao">Por injeção via intramuscular na parte superior do braço – músculo deltóide –
+                ou no vasto lateral da coxa.</p>
+            <p class="titulo">Quem deve tomar?</p>
+            <p class="descricao">Pessoas com mais de sessenta anos.</p>
+            <p class="titulo">Quais os benefícios da vacina?</p>
+            <p class="descricao">Proteção contra a difteria e o tétano.
+                 <strong>A difteria</strong> é causada por um bacilo, produtor de uma toxina difteria
+                (substância tóxica), que atinge as amídalas, a faringe, o nariz e a
+                pele, onde provoca placas branco-acinzentadas. É transmitida, por
+                meio de tosse ou espirro, de uma pessoa contaminada para outra.
+                <strong>O tétano</strong> é uma infecção, causada por uma toxina (substância tóxica) tétano
+                produzida pelo bacilo tetânico, que entra no organismo por meio de
+                ferimentos ou lesões na pele (tétano acidental) ou pelo coto do
+                cordão umbilical (tétano neonatal ou mal dos sete dias) e atinge o
+                sistema nervoso central. Caracteriza-se por contrações e espasmos,
+                dificuldade em engolir e rigidez no pescoço.</p>
+            <p class="titulo">Informações adicionais:</p>
+            <p class="descricao">Pessoas não vacinadas devem tomar três doses (com intervalo de dois meses
+                entre as doses (zero, dois, quatro meses)).
+                Pessoas que já foram vacinadas com as três doses devem tomar uma dose de
+                reforço a cada dez anos.</p>
+        </div>
+        <div class="menuDeNavegacao" id="tt">
+            <nav>
+                <ul class="listaDeIcones">
+                    <li><button class="botaoDeMenuInferior" onclick="location.href='/TelaInicialDaAplicacao'"><img src="img/home.png" alt="home" title="Início" class="imgDeNavegacao"></button><div class="separa"></div><p class="descBotao" onclick="location.href='/TelaInicialDaAplicacao'">Início</p></li>
+                    <li><button class="botaoDeMenuInferior" onclick="location.href='/CadernetaDeVacinacao'"><img src="img/verificaVacina.png" alt="Verifica Vacina" title="Caderneta" class="imgDeNavegacao"></button><div class="separa"></div><p class="descBotao" onclick="location.href='/CadernetaDeVacinacao'">Caderneta</p></li>
+                    <li><button class="botaoDeMenuInferior" onclick="location.href='/CalendarioDeVacinacao'"><img src="img/calendario.png" alt="calendario" title="Calendário" class="imgDeNavegacao"></button><div class="separa"></div><p class="descBotao" onclick="location.href='/CalendarioDeVacinacao'">Calendário</p></li>
+                    <li><button class="botaoDeMenuInferior" onclick="location.href='/Historico'"><img src="img/historico.png" alt="historico" title="Histórico" class="imgDeNavegacao"></button><div class="separa"></div><p class="descBotao" onclick="location.href='/Historico'">Histórico</p></li>
+                </ul>
+            </nav>
+        </div>
+    </body>
+
+</html>

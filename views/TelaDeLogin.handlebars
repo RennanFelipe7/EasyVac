@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang=”pt-br”>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Tela de Login</title>
+        <link rel="stylesheet" href="css/TelaDeLogin.css">
+        <script src="JavaScript/LoginControle.js" defer></script>
+    </head>
+
+    <body onload="carregou({{logou}})">
+        <header>
+            <img src="img/easyvac.png" alt="easyvac logo" class="easyvacLogo">
+        </header>
+        
+            <form action="/Login" class="espacoDeLogin" method="POST"> 
+                <label for="login_id" class="nomesLogin">Login:</label>
+                <input type="text" name="login" id="login_id" placeholder="Insira o seu email de login" class="campoDetexto" required>
+                <label for="senha_id" class="senhaLogin">Senha:</label>
+                <input type="password" name="senha" id="senha_id" placeholder="Insira a sua senha" class="campoDetexto" required>
+                <p class="invalido" id="invalido">Email ou senha inválido</p>
+                <div class="textEsqueciSenha"><button class="redefinirSenha" type="button" onclick="location.href = '/RecuperaSenha'">Esqueci minha senha</button></div>
+                <input type="submit" value="Entrar" class="entrar" id="entrarID">
+            </form>
+        
+        <div class="divRealizaCadastro">
+            <div class="textNaoPossuiConta"><label for="naoPossuiUmaConta_id" class="naoPossuiUmaConta">Não possui uma conta?</label></div>
+            <button onclick="location.href = '/Cadastro';"type="button" class="realizarCadastro" id="botaoRealizaCadastro">Realizar Cadastro</button>
+        </div>
+        </body>
+</html>

@@ -1,0 +1,113 @@
+body, html{
+    background-image: linear-gradient(to bottom right, #057FB7, #72B6D6);
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    
+}
+header{
+    height: 15%;
+    width: 100%;
+}
+.easyvacLogo{
+    margin-left: 19%;
+    height: 100%;
+    width: 57%;
+}
+.espacoDeLogin{
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 58%;
+}
+.nomesLogin{
+    color: white;
+    font-weight: bold;
+    display: block;
+    font-size: calc(1vh + 1vw);
+    margin-top: 7%;
+    display: inline-block;
+}
+.senhaLogin{
+    color: white;
+    font-weight: bold;
+    margin-top: 2%;
+    display: block;
+    font-size: calc(1vh + 1vw);
+}
+.campoDetexto{
+    width: 90%;
+    height: 10%;
+    margin-top: 2%;
+    display: block;
+}
+.invalido{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: clamp(1.5vw, 2vh, 3vw);
+    display: none;
+}
+.textEsqueciSenha{
+    width: 100%;
+    margin-top: 2%;
+    text-align: center;
+    height: 7%;
+}
+.redefinirSenha{
+    color: white;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: calc(1vh + 0.8vw);
+    padding: 0%;
+    margin-left: -7%;
+}
+.redefinirSenha:hover{
+    text-decoration-line: underline;
+}
+
+.entrar{
+    cursor: pointer;
+    margin-top:  6%;
+    color: #065678;
+    background-color: orange;
+    width: 40%;
+    height: 10%;
+    margin-left: 27%;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: calc(1.5vh + 0.8vw);
+    padding: 0%;
+}
+
+.divRealizaCadastro{
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 27%;
+}
+.textNaoPossuiConta{
+    text-align: center;
+    width: 91%;
+}
+.naoPossuiUmaConta{
+    font-size: calc(1vh + 0.8vw);
+    padding: 0%;
+    display: inline-block;
+    margin-left: 3%;
+    margin-top: 10%;
+    color: rgb(255, 255, 255);
+}
+
+.realizarCadastro{
+    cursor: pointer;
+    margin-top: 1%;
+    color: #057fB7;
+    background-color: white;
+    width: 40%;
+    height: 21.48%;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: calc(1vh + 1vw);
+    margin-left: 27%;
+    padding-bottom: 1vh;
+    padding: 0%;
+}

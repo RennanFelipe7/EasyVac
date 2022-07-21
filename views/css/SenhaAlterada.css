@@ -1,0 +1,149 @@
+body, html{
+    background: #e3e4e3; 
+    margin: 0%;
+    height: 100%;
+    width: 100%;
+}
+header{
+    height: 15%;
+    width: 100%;
+    background-color: rgba(211, 201, 201, 0.4);
+}
+.easyvacLogo{
+    margin-left: 19%;
+    height: 100%;
+    width: 57%;
+}
+.preenchaOsSeguintesDados{
+    font-weight: bold;
+    margin-left: 38%;
+    font-size: 120%;
+}
+.nomesDeCadastro{
+    margin-left: 22%;
+    font-weight: bold;
+}
+.camposDeCadastro{
+    margin-left: 22%;
+    width: 680px;
+    height: 40px;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(0.8) brightness(50%) sepia(100%) saturate(10000%) hue-rotate(240deg);
+    font-size: 150%;
+}
+
+.radio{
+    margin-left: 22%;
+}
+
+
+input[type='radio']:after {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: white;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid #057FB7;
+}
+input[type='radio']:checked:after {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #057FB7;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+.concluirCadastro{
+    color: white;
+    background-color: #057fB7;
+    width: 200px;
+    height: 40px;
+    margin-left: 39%;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.desfocaTelaDeCadastro{
+    background-color: rgba(211, 201, 201, 0.4);
+    height: 85%;
+    width: 100%;
+    overflow: auto;
+}
+.acessaOuRetorna{
+    background-color: #06567b;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 60vmin;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10vmax;
+}
+.divImagem{
+    height: 30%;
+    align-items: center;
+    display: flex;
+    padding-top: 2vmax;
+}
+.divText{
+    height: 20%;
+}
+.divButton1{
+    height: calc(8vmin);
+    align-items: center;
+    margin-top: 4vmin;
+}
+.divButton2{
+    height: calc(50%);
+    align-items: center;
+}
+.sucesso{
+    height: 15vmin;
+    width: 15vmin; 
+    margin: auto;
+    display: block;
+    max-width: 100%;
+}
+.cadastroSucesso{
+    font-size: clamp(1.7vw, 2.7vh, 3.7vw);
+    color: white;
+    font-weight: bold;
+    padding: 8vmin 0% 0% 0%;
+    margin: 0%;
+    
+}
+.btAcessaConta{
+    background-color: orange;
+    color: #06567b;
+    font-weight: bold;
+    height: 8vmin;
+    width: 50vmin;
+    border-radius: 5px;
+    font-size: clamp(1.4vw, 2.4vh, 3.4vw);
+    cursor: pointer;
+    padding: 0%;
+}
+.btRetonraLogin{
+    background-color: white;
+    color: #06567b;
+    font-weight: bold;
+    height: 8vmin;
+    width: 50vmin;
+    border-radius: 5px;
+    margin-top: 10vmin;
+    font-size: clamp(1.4vw, 2.4vh, 3.4vw);
+    cursor: pointer;
+    padding: 0%;
+}

@@ -1,0 +1,259 @@
+body, html{
+    background: #e3e4e3;
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    
+
+}
+header{
+    background-color:#057fb7;
+    width: 100%;
+    height: 15%;
+}
+.easyvacMenor{
+    margin-top: 2.5vh;
+    position: relative;
+    margin-left: 0%;
+    height: 80%;
+    width: 40%;
+}
+.botaoSair{
+    margin-top: 5vh;
+    width: 10vmax;
+    height: 40%;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    position: relative;
+    float: right;
+    align-items: center;
+    text-align: center;
+    font-size: calc(1vh + 1vw);
+    display: flex;
+    border: 0%;
+    padding: 0%;
+    letter-spacing: 0.5vw;
+}
+.botaoSair p{
+    font-weight: bold;
+    width: 100%;    
+}
+
+.porCentVacinasTomadas{
+    background-color: #ffbc40;
+    border-radius: 10px;
+    display: flex; 
+    margin-top: 2vh;
+    color: white;
+    margin-left: 23%;
+    margin-right: 24%;
+    height: 22%;
+    width: 53%;
+    font-size: 0%;
+    text-align: center;
+    align-items: center;
+}
+.porcentagem{
+    font-size: clamp(4vw, 5vh, 8vw);
+    margin-left: 5%;
+}
+.nome{
+    font-size: clamp(1.4vh, 2.5vw, 3.6vh);;
+    margin-left: 7%;
+    margin-right: 9%;
+    text-align: left;
+}
+
+.importanciaDaVacinacao{
+    color: #025175;
+    font-size: 120%;
+    margin: 0%;         
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+    font-size: 100%;
+}
+
+.exibeInformacoesDaVacina{
+    width: 100%;
+    height: 12%;
+    margin-left: 0%;
+    color: #057fb7;
+    text-align: left;
+    font-weight: bold;
+    cursor: ne-resize;
+    font-size: 70%;
+    display: flex;
+    margin-top: 3vh;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 0%;
+    border-right: 0%;
+}
+.imagemDeDentroDoBotao{
+    position: relative;
+    cursor: ne-resize;
+    height: 100%;    
+}
+.help{
+    height: 40%;
+    margin-top: 1vh;
+}
+.importanciaVac{
+    margin-left: 23%;
+    margin-right: 24%;
+    font-size: 3.3vmin;
+    height: 100%;
+}
+.textAreaOqueSaoVacinas{
+    margin-top: 0%;
+    font-size: clamp(1.5vh, 2.5vw, 3.5vh);
+    text-align: justify;
+    height: 80%;
+    margin-bottom: 0%;
+    color:white;
+}
+
+.oQueSaoVacinas{
+    display: none; 
+    position:relative;
+    margin-left: 23%;
+    margin-right: 24%;
+    background-color:#72b6d6;
+    height: 100%;
+    top: -100%;
+    text-align:center;
+    align-items: center;
+    
+}
+
+.fechar{
+    cursor: pointer;
+    color: #057fb7;
+    font-weight: bold;
+    font-size: 3vmin;
+    width: 20%;
+    height: 12%;
+    padding: 0%;
+    margin-top: 1vmin;
+}
+
+
+.textAreaComoAtua{
+    margin-top: 0%;
+    font-size: clamp(1.5vh, 2.5vw, 3.3vh);
+    text-align: justify;
+    height: 80%;
+    margin-bottom: 0%;
+    color:white;
+}
+.comoAtua{
+    display: none;
+    position:relative;
+    margin-left: 23%;
+    margin-right: 24%;
+    background-color:#72b6d6;
+    height: 100%;
+    top: -100%;
+    text-align:center;
+    align-items: center;
+    
+}
+.porqueEImportante{
+    display: none;
+    position:relative;
+    margin-left: 23%;
+    margin-right: 24%;
+    background-color:#72b6d6;
+    height: 100%;
+    top: -100%;
+    text-align:center;
+    align-items: center;
+}
+.textAreaPorqueEImportante{
+    margin-top: 0%;
+    font-size: clamp(1.4vh, 2.4vw, 3.2vh);
+    text-align: justify;
+    height: 80%;
+    margin-bottom: 0%;
+    color:white;
+}
+
+.podeErradircar{
+    display: none;
+    position:relative;
+    margin-left: 23%;
+    margin-right: 24%;
+    background-color:#72b6d6;
+    height: 100%;
+    top: -100%;
+    text-align:center;
+    align-items: center;
+}
+.textAreaPodeErradicar{
+    margin-top: 0%;
+    font-size: clamp(1.8vh, 2.8vw, 3.6vh);
+    text-align: justify;
+    height: 80%;
+    margin-bottom: 0%;
+    color:white;
+}
+
+
+li{
+    list-style-type: none;
+    display: inline-block;
+    height: 100%;
+    width: 13vw;
+    text-align: center;
+    margin-left: 5vw;
+}
+
+.listaDeIcones{
+    background-color: #057fb7;
+    border-radius: 10px 10px 0px 0px;
+    height: 100%;
+    padding: 0%;
+    margin: 0%;
+}
+.botaoDeMenuInferior{
+    background-color: #057fb7;
+    border-color: orange;
+    height: 60%;
+    margin-top: 3vh; 
+    cursor: pointer;
+    
+}
+.imgDeNavegacao{
+    height: 90%;
+    width: 90%;
+    margin-top: 0.5vmin;
+}
+.menuDeNavegacao{
+    margin-top: 3vh;
+    margin-left: 10%;
+    margin-right: 11%;
+    height: 17%;
+}
+.menuDeNavegacao nav{
+    height: 100%;
+}
+.infbotaoMenu{ 
+    margin: 0% 0% 0% 0%;
+    padding: 0%;
+    height: calc(40% - 3vh);
+}
+.descBotao{
+    cursor: pointer;
+    color: orange;
+    font-weight: bold;
+    font-size: clamp(1.2vw, 2.5vh, 3vw);
+    padding-top: 0%;
+    margin: 0% 0% 0% 0%;
+}
+
+.separa{
+    height: 1%;
+}

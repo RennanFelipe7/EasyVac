@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang=”pt-br”>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Tela de Cadastro</title>
+        <link rel="stylesheet" href="css/TelaDeCadastro.css">
+        <script src="JavaScript/scriptCadastro.js" defer></script>
+    </head>
+
+    <body onload="validaForm({{diferente}})">
+        <header>
+            <img src="img/easyvac.png" alt="easyvac logo" class="easyvacLogo">
+        </header>    
+        <div></div><br><br>
+        <div class="divCadastro">
+            <form action="/addDadosFormulario" method="POST" class="formCadastro">
+                <p class="preenchaOsSeguintesDados">Preencha os seguintes dados:</p><br>
+                <label for="nomeCompleto_id" class="nomesDeCadastro">Nome completo:</label> <p class="asterisco">*</p> <label class="campObrig">* Campo Obrigatório</label><br>
+                <input type="text" name="nomeCompleto" id="nomeCompleto_id" placeholder="Insira o seu nome completo" class="camposDeCadastro" required><br><br>
+                <label for="dataDeNascimento_id" class="nomesDeCadastro">Data de nascimento:</label> <p class="asterisco">*</p>
+                <input type="text" name="dataDeNascimento" id="dataDeNascimento_id" class="camposDeCadastro" placeholder="Selecione a data do seu nascimento" onfocus="(this.type='date')" required>
+                <p class="dtInvalida" id="dtinvalida">Data inválida</p>
+                <br><br>
+                <label for="numeroRegistroDeNascimento" class="nomesDeCadastro">Numero do registro de nascimento:</label> <p class="asterisco">*</p><br>
+                <input type="number" name="NumeroRegNasc" id="numeroRegistroDeNascimento" class="camposDeCadastro" placeholder="Insira o número do registro de nascimento" required min="1" max="99999999999999999999999999999999999999999999999999">
+                <p class="numRegEmUso" id="numRegEmUso_ID">Número do registro de nascimento já em uso</p><br><br>
+                <label for="genero" class="nomesDeCadastro">Gênero:</label> <p class="asterisco">*</p><br>
+
+                <input type="radio" name="genero" value="masculino" id="masculino_id" class="radio" required>
+                <label for="masculino_id" id="labelMasc"><button type="button" class="radioFake" id="radioMascFake"></button><p class="radiotext">Masculino(Cis/Trans)</p></label><br>
+                <input type="radio" name="genero" value="feminino" id="feminino_id" class="radio">
+                <label for="feminino_id" id="labelFem"><button type="button" class="radioFake" id="radioFemFake"></button><p class="radiotext">Feminino(Cis/Trans)</p></label><br>
+                <input type="radio" name="genero" value="outro" id="outro_id" class="radio">
+                <label for="outro_id" id="labelOutro"><button type="button" class="radioFake" id="radioOutroFake"></button><p class="radiotext">Outro</p></label><br><br>
+
+                <label for="email_id" class="nomesDeCadastro">Email:</label> <p class="asterisco">*</p><br>
+                <input type="email" name="email" id="email_id" class="camposDeCadastro" placeholder="Insira o seu email" required>
+                <p class="emailJaEmUso" id="jaExisteEmail">Email já em uso</p><br><br>
+                <label for="senha_id" class="nomesDeCadastro">Senha:</label> <p class="asterisco">*</p><br>
+                <input type="password" name="senha" id="senha_id"class="camposDeCadastro" placeholder="Insira a sua senha" required><br><br>
+                <label for="confirmaSenha_id" class="nomesDeCadastro">Confirmar senha:</label> <p class="asterisco">*</p>
+                <input type="password" name="senhaConfirm" id="confirmaSenha_id"class="camposDeCadastro" placeholder="Insira a sua senha" required>
+                <p class="senhasNIguais" id="senhasNIguaisID">As senhas não são iguais</p>
+                <p class="senhasMenor8" id="senhasMenor8ID">O tamanho das senhas tem que ser maior que 7 digitos</p>
+                <input type="submit" name="concluirCadastro" id="concluirCadastro_id" value="Concluir Cadastro" class="concluirCadastro">
+            </form>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang=”pt-br”>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/CadernetaDeVacinacao.css">
+        <script src="JavaScript/script_CadernetaDeVacinacao.js" defer></script>
+        <title>Caderneta De Vacinação</title>
+    </head>
+
+    <body onload="AtualizaCoresVacHTML({{bcgDose1}}, {{bcgDose2}},
+    {{poliomieliteDose1}}, {{poliomieliteDose2}}, {{poliomieliteDose3}},{{poliomieliteDose4}}, 
+    {{tetraValenteDose1}}, {{tetraValenteDose2}}, {{tetraValenteDose3}}, {{tetraValenteDose4}},
+    {{tripliceViral}},{{hepatiteBDose1}},{{hepatiteBDose2}},{{hepatiteBDose3}},{{febreAmarelaDoseAtual}},{{duplaAdultoDose1}},
+    {{duplaAdultoDose2}}, {{duplaAdultoDose3}},{{gripe}},{{pneumoniaDose1}},{{pneumoniaDose5Anos}} ,{{idade}})"> 
+    
+        <header>
+            <img src="img/easyvac.png" alt="easyvacMenor" class="easyvacMenor">
+            <button class="botaoSair" title="Sair" id="idBotaoSair" onclick="location.href = '/Sair';"><p>Sair</p></button>
+        </header>
+
+        <div class="cadernetaDiv">
+            <p for="" class="cadernetaP">Caderneta de Vacinação</p>
+        </div>
+        <div class="descricaoCaderneta">
+            <p for="" class="descricaoCadernetaP">Utilize a cardeneta para marcar uma vacina após sua aplicação e consultar as que foram aplicadas. Escolha a vacina, clique na seta ou no nome da vacina para expandir todas as doses disponiveis da vacina.</p>
+        </div>
+        <form action="/atualizaBancoDeDados" method="POST" class="formularioVacinas"> 
+            <div class="divMarcaVacina">
+                <p class="centraliza"><label class="nomeVacinaBCG" for="setaBCGid" id="nomeVacBCG">BCG ID</label></p>
+                <div class="dosesBCG" id="dosesBCG">
+                    <div class="escondeBCG" id="escondeBCG">
+                        <div class="divDaVacina">
+                            <p class="nomeDaVacina" id="respBCG">BCG ID</p>
+                            <button class="checkboxFake" id="ckFakeBcgDose1" type="button"></button>
+                            <input type="checkbox" class="botaoMarcaVacTomada" id="btBcgDose1" name="bcgDose1Ck" ></input>
+                            <p class="quantasDose">Dose unica</p>
+                        </div>
+                        <div class="insereHorario" id="insereHorarioBcgDose1">
+                            <div class="nomeHorario">
+                                <p>Selecione abaixo a data de aplicação da primeira dose da vacina da BCG</p>
+                            </div>
+                            <div class="inputHorario">
+                                <input type="date" class="dataDeAplic" id="dataAtualMarcaVac" name="DtMbcgDose1">
+                                <p class="dtInvalida" id="dtInvBCGDose1">Data inválida</p>
+                            </div>
+                            <div class="btMarcaHorario">
+                                <button type="button" id="marcaDataBcgDose1">Escolher data</button>
+                            </div>
+                        </div>
+                        <div class="divDaVacina">
+                            <p class="nomeDaVacina" id="respBCG">BCG ID</p>
+                            <button class="checkboxFake" id="ckFakeBcgDose2" type="button"></button>
+                            <input type="checkbox" class="botaoMarcaVacTomada" id="btBcgDose2" name="bcgDose2Ck"></input>
+                            <p class="quantasDose">2° Dose ( opcional )</p>
+                        </div>
+
+                        <div class="insereHorario" id="insereHorarioBcgDose2">
+                            <div class="nomeHorario">
+                                <p>Selecione abaixo a data de aplicação da segunda dose da vacina da BCG</p>
+                            </div>
+                            <div class="inputHorario">
+                                <input type="date" class="dataDeAplic" id="dataAtualMarcaVacBcgDose2" name="DtMbcgDose2">
+                                <p class="dtInvalida" id="dtInvBCGDose2">Data inválida</p>
+                            </div>
+                            <div class="btMarcaHorario">
+                                <button type="button" id="marcaDataBcgDose2">Escolher data</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="setaBCG" id="setaBCGid" type="button" title="BCG"><img src="img/setaParaBaixo.png" alt=""></button>
+
+                <p class="centraliza"><label class="nomeVacinaPOLIOMIELITE" for="setaPolio" id="nomeVacPolio">POLIOMIELITE</label></p>
+                <div class="dosesPolio" id="dosesPolio">
+                    <div class="escondePolio" id="escondePolio">
+                    <div class="divDaVacina">
+                        <p class="nomeDaVacina" id="respPolio">POLIOMIELITE ( PARALISIA INFANTIL )</p>
+                        <button class="checkboxFake" id="ckFakePolioDose1" type="button"></button>
+                        <input type="checkbox" class="botaoMarcaVacTomada" id="poliomieliteDose1" name="poliomieliteDose1Ck" ></input>
+                        <p class="quantasDose">1° Dose</p>
+                    </div>
+                    <div class="insereHorario" id="insereHorarioPolioDose1">
+                        <div class="nomeHorario">
+                            <p>Selecione abaixo a data de aplicação da primeira dose da vacina da Poliomielite</p>
+                        </div>
+                        <div class="inputHorario">
+                            <input type="date" class="dataDeAplic" id="dataAtualMarcaVacPolioDose1" name="DtMPolioDose1">
+                            <p class="dtInvalida" id="dtInvPolioDose1">Data inválida</p>
+                        </div>
+                        <div class="btMarcaHorario">
+                            <button type="button" id="marcaDataPolioDose1">Escolher data</button>
+                        </div>
+                    </div>
+                    <div class="divDaVacina">
+                        <p class="nomeDaVacina" id="respPolio">POLIOMIELITE ( PARALISIA INFANTIL )</p>
+                        <button class="checkboxFake" id="ckFakePolioDose2" type="button"></button>
+                        <input type="checkbox" class="botaoMarcaVacTomada" id="poliomieliteDose2" name="poliomieliteDose2Ck" ></input>
+                        <p class="quantasDose">2° Dose</p>
+                    </div>
+                    <div class="insereHorario" id="insereHorarioPolioDose2">
+                        <div class="nomeHorario">
+                            <p>Selecione abaixo a data de aplicação da segunda dose da vacina da Poliomielite</p>
+                        </div>
+                        <div class="inputHorario">
+                            <input type="date" class="dataDeAplic" id="dataAtualMarcaVacPolioDose2" name="DtMPolioDose2">
+                            <p class="dtInvalida" id="dtInvPolioDose2">Data inválida</p>
+                        </div>
+                        <div class="btMarcaHorario">
+                            <button type="button" id="marcaDataPolioDose2">Escolher data</button>
+                        </div>
+                    </div>
+                    <div class="divDaVacina">
+                        <p class="nomeDaVacina" id="respPolio">POLIOMIELITE ( PARALISIA INFANTIL )</p>
+                        <button class="checkboxFake" id="ckFakePolioDose3" type="button"></button>
+                        <input type="checkbox" class="botaoMarcaVacTomada" id="poliomieliteDose3" name="poliomieliteDose3Ck" ></input>
+                        <p class="quantasDose">3° Dose</p>
+                    </div>
+                    <div class="insereHorario" id="insereHorarioPolioDose3">
+                        <div class="nomeHorario">
+                            <p>Selecione abaixo a data de aplicação da terceira dose da vacina da Poliomielite</p>
+                        </div>
+                        <div class="inputHorario">
+                            <input type="date" class="dataDeAplic" id="dataAtualMarcaVacPolioDose3" name="DtMPolioDose3">
+                            <p class="dtInvalida" id="dtInvPolioDose3">Data inválida</p>
+                        </div>
+                        <div class="btMarcaHorario">
+                            <button type="button" id="marcaDataPolioDose3">Escolher data</button>
+                        </div>
+                    </div>
+                    <div class="divDaVacina">
+                        <p class="nomeDaVacina" id="respPolio">POLIOMIELITE ( PARALISIA INFANTIL )</p>
+                        <button class="checkboxFake" id="ckFakePolioDose4" type="button"></button>
+                        <input type="checkbox" class="botaoMarcaVacTomada" id="poliomieliteDose4" name="poliomieliteDose4Ck" ></input>
+                        <p class="quantasDose">4° Dose</p>
+                    </div>
+                    <div class="insereHorario" id="insereHorarioPolioDose4">
+                        <div class="nomeHorario">
+                            <p>Selecione abaixo a data de aplicação da quarta dose da vacina da Poliomielite</p>
+                        </div>
+                        <div class="inputHorario">
+                            <input type="date" class="dataDeAplic" id="dataAtualMarcaVacPolioDose4" name="DtMPolioDose4">
+                            <p class="dtInvalida" id="dtInvPolioDose4">Data inválida</p>
+                        </div>
+                        <div class="btMarcaHorario">
+                            <button type="button" id="marcaDataPolioDose4">Escolher data</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <button class="setaPolio" id="setaPolio" type="button" title="POLIOMIELITE"><img src="img/setaParaBaixo.png" alt=""></button>
+
+                <p class="centraliza"><label class="nomeVacinaTETRAVALENTE" for="setaTetra" id="nomeVacTetra">TETRAVALENTE</label></p>
+                <div class="dosesTetra" id="dosesTetra">
+                    <div class="escondeTetra" id="escondeTetra">
+                    <div class="divDaVacina">
+                        <p class="nomeDaVacina" id="respTetra">TETRA VALENTE (DIFTERIA, TÉTANO, COQUELUCHE, MENINGITE ) </p>
+                        <button class="checkboxFake" id="ckFakeTetraDose1" type="button"></button>
+                        <input type="checkbox" class="botaoMarcaVacTomada" id="tetraValenteDose1" name="tetraValenteDose1Ck" ></input>
+                        <p class="quantasDose">1° Dose</p>
+                    </div>
+                    <div class="insereHorario" id="insereHorarioTetraDose1">
+                        <div class="nomeHorario">
+                            <p>Selecione abaixo a data de aplicação da primeira dose da vacina da Tetravalente</p>
+                        </div>
+                        <div class="inputHorario">
+                            <input type="date" class="dataDeAplic" id="dataAtualMarcaVacTetraDose1" name="DtMTetraDose1">
+                            <p class="dtInvalida" id="dtInvTetraDose1">Data inválida</p>
+                        </div>
+                        <div class="btMarcaHorario">
+                            <button type="button" id="marcaDataTetraDose1">Escolher data</button>
+                        </div>
+                    </div>
+                    <div class="divDaVacina">
+                        <p class="nomeDaVacina" id="respTetra">TETRA VALENTE (DIFTERIA, TÉTANO, COQUELUCHE, MENINGITE ) </p>
+                        <button class="checkboxFake" id="ckFakeTetraDose2" type="button"></button>
+                        <input type="checkbox" class="botaoMarcaVacTomada" id="tetraValenteDose2" name="tetraValenteDose2Ck" ></input>
+                        <p class="quantasDose">2° Dose</p>
+                    </div>
+                    <div class="insereHorario" id="insereHorarioTetraDose2">
+                        <div class="nomeHorario">
+                            <p>Selecione abaixo a data de aplicação da segunda dose da vacina da Tetravalente</p>
+                        </div>
+                        <div class="inputHorario">
+                            <input type="date" class="dataDeAplic" id="dataAtualMarcaVacTetraDose2" name="DtMTetraDose2">
+                            <p class="dtInvalida" id="dtInvTetraDose2">Data inválida</p>
+                        </div>
+                        <div class="btMarcaHorario">
+                            <button type="button" id="marcaDataTetraDose2">Escolher data</button>
+                        </div>
+                    </div>
+                    <div class="divDaVacina">
+                        <p class="nomeDaVacina" id="respTetra">TETRA VALENTE (DIFTERIA, TÉTANO, COQUELUCHE, MENINGITE ) </p>
+                        <button class="checkboxFake" id="ckFakeTetraDose3" type="button"></button>
+                        <input type="checkbox" class="botaoMarcaVacTomada" id="tetraValenteDose3" name="tetraValenteDose3Ck" ></input>
+                        <p class="quantasDose">3° Dose</p>
+                    </div>
+                    <div class="insereHorario" id="insereHorarioTetraDose3">
+                        <div class="nomeHorario">
+                            <p>Selecione abaixo a data de aplicação da terceira dose da vacina da Tetravalente</p>
+                        </div>
+                        <div class="inputHorario">
+                            <input type="date" class="dataDeAplic" id="dataAtualMarcaVacTetraDose3" name="DtMTetraDose3">
+                            <p class="dtInvalida" id="dtInvTetraDose3">Data inválida</p>
+                        </div>
+                        <div class="btMarcaHorario">
+                            <button type="button" id="marcaDataTetraDose3">Escolher data</button>
+                        </div>
+                    </div>
+                    <div class="divDaVacina">
+                        <p class="nomeDaVacina" id="respTetra">TETRA VALENTE (DIFTERIA, TÉTANO, COQUELUCHE ) </p>
+                        <button class="checkboxFake" id="ckFakeTetraDose4" type="button"></button>
+                        <input type="checkbox" class="botaoMarcaVacTomada" id="tetraValenteDose4" name="tetraValenteDose4Ck" ></input>
+                        <p class="quantasDose">4° Dose</p>
+                    </div>
+                    <div class="insereHorario" id="insereHorarioTetraDose4">
+                        <div class="nomeHorario">
+                            <p>Selecione abaixo a data de aplicação da quarta dose da vacina da Tetravalente</p>
+                        </div>
+                        <div class="inputHorario">
+                            <input type="date" class="dataDeAplic" id="dataAtualMarcaVacTetraDose4" name="DtMTetraDose4">
+                            <p class="dtInvalida" id="dtInvTetraDose4">Data inválida</p>
+                        </div>
+                        <div class="btMarcaHorario">
+                            <button type="button" id="marcaDataTetraDose4">Escolher data</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <button class="setaTetra" id="setaTetra" type="button" title="TETRAVALENTE"><img src="img/setaParaBaixo.png" alt=""></button>
+
+                <p class="centraliza"><label class="nomeVacinaTRIPLICEVIRAL" for="setaTriplice" id="nomeVacTriplice">TRÍPLICE VIRAL</label></p>
+                <div class="dosesTriplice" id="dosesTriplice">
+                    <div class="escondeTriplice" id="escondeTriplice">
+                    <div class="divDaVacina">
+                        <p class="nomeDaVacina" id="respTriplice">TRÍPLICE VIRAL ( SARAMPO, RUBÉOLA, CAXUMBA )</p>
+                        <button class="checkboxFake" id="ckFakeTriplice" type="button"></button>
+                        <input type="checkbox" class="botaoMarcaVacTomada" id="tripliceViral" name="tripliceViralCk" ></input>
+                        <p class="quantasDose">Dose unica</p>
+                    </div>
+                    </div>
+                    <div class="insereHorario" id="insereHorarioTripliceDose1">
+                        <div class="nomeHorario">
+                            <p>Selecione abaixo a data de aplicação da vacina da Trípliceviral</p>
+                        </div>
+                        <div class="inputHorario">
+                            <input type="date" class="dataDeAplic" id="dataAtualMarcaVacTripliceDose1" name="DtMTripliceDose1">
+                            <p class="dtInvalida" id="dtInvTripliceDose1">Data inválida</p>
+                        </div>
+                        <div class="btMarcaHorario">
+                            <button type="button" id="marcaDataTripliceDose1">Escolher data</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <button class="setaTriplice" id="setaTriplice" type="button" title="TRIPLICEVIRAL"><img src="img/setaParaBaixo.png" alt=""></button>
+
+                <p class="centraliza"><label class="nomeVacinaHEPATITEB" for="setaHepB" id="nomeVacHepB">HEPATITE B</label></p>
+                <div class="dosesHepB" id="dosesHepB">
+                    <div class="escondeHepB" id="escondeHepB">
+                    <div class="divDaVacina">
+                        <p class="nomeDaVacina" id="respHepaB">HEPATITE B</p>
+                        <button class="checkboxFake" id="ckFakeHepaDose1" type="button"></button>
+                        <input type="checkbox" class="botaoMarcaVacTomada" id="hepatiteBDose1" name="hepatiteBDose1Ck" ></input>
+                        <p class="quantasDose">1° Dose</p>
+                    </div>
+                    <div class="insereHorario" id="insereHorarioHepBDose1">
+                        <div class="nomeHorario">
+                            <p>Selecione abaixo a data de aplicação da primeira dose da vacina da Hepatite B</p>
+                        </div>
+                        <div class="inputHorario">
+                            <input type="date" class="dataDeAplic" id="dataAtualMarcaVacHepBDose1" name="DtMHepBDose1">
+                            <p class="dtInvalida" id="dtInvHepBDose1">Data inválida</p>
+                        </div>
+                        <div class="btMarcaHorario">
+                            <button type="button" id="marcaDataHepBDose1">Escolher data</button>
+                        </div>
+                    </div>
+                    <div class="divDaVacina">
+                        <p class="nomeDaVacina" id="respHepaB">HEPATITE B</p>
+                        <button class="checkboxFake" id="ckFakeHepaDose2" type="button"></button>
+                        <input type="checkbox" class="botaoMarcaVacTomada" id="hepatiteBDose2" name="hepatiteBDose2Ck" ></input>
+                        <p class="quantasDose">2° Dose</p>
+                    </div>
+                    <div class="insereHorario" id="insereHorarioHepBDose2">
+                        <div class="nomeHorario">
+                            <p>Selecione abaixo a data de aplicação da segunda dose da vacina da Hepatite B</p>
+                        </div>
+                        <div class="inputHorario">
+                            <input type="date" class="dataDeAplic" id="dataAtualMarcaVacHepBDose2" name="DtMHepBDose2">
+                            <p class="dtInvalida" id="dtInvHepBDose2">Data inválida</p>
+                        </div>
+                        <div class="btMarcaHorario">
+                            <button type="button" id="marcaDataHepBDose2">Escolher data</button>
+                        </div>
+                    </div>
+                    <div class="divDaVacina">
+                        <p class="nomeDaVacina" id="respHepaB">HEPATITE B</p>
+                        <button class="checkboxFake" id="ckFakeHepaDose3" type="button"></button>
+                        <input type="checkbox" class="botaoMarcaVacTomada" id="hepatiteBDose3" name="hepatiteBDose3Ck" ></input>
+                        <p class="quantasDose">3° Dose</p>
+                    </div>
+                    <div class="insereHorario" id="insereHorarioHepBDose3">
+                        <div class="nomeHorario">
+                            <p>Selecione abaixo a data de aplicação da terceira dose da vacina da Hepatite B</p>
+                        </div>
+                        <div class="inputHorario">
+                            <input type="date" class="dataDeAplic" id="dataAtualMarcaVacHepBDose3" name="DtMHepBDose3">
+                            <p class="dtInvalida" id="dtInvHepBDose3">Data inválida</p>
+                        </div>
+                        <div class="btMarcaHorario">
+                            <button type="button" id="marcaDataHepBDose3">Escolher data</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <button class="setaHepB" id="setaHepB" type="button" title="HEPATITE B"><img src="img/setaParaBaixo.png" alt=""></button>    
+
+                <p class="centraliza"><label class="nomeVacinaFEBREAMARELA" for="setaFebre" id="nomeVacFebre">FEBRE AMARELA</label></p>
+                <div class="dosesFebre" id="dosesFebre">
+                    <div class="escondeFebre" id="escondeFebre">
+                    <div class="divDaVacina">
+                        <p class="nomeDaVacina" id="respFebre">FEBRE AMARELA</p>
+                        <button class="checkboxFake" id="ckFakeFebreDose1" type="button"></button>
+                        <input type="checkbox" class="botaoMarcaVacTomada" id="febreAmarelaDoseAtual" name="febreAmarelaDoseAtualCk" ></input>
+                        <p class="quantasDose">Dose Atual</p>
+                    </div>
+                    <div class="insereHorario" id="insereHorarioFebreDose1">
+                        <div class="nomeHorario">
+                            <p>Selecione abaixo a data de aplicação da primeira dose da vacina da Febre Amarela</p>
+                        </div>
+                        <div class="inputHorario">
+                            <input type="date" class="dataDeAplic" id="dataAtualMarcaVacFebreDose1" name="DtMFebreDose1">
+                            <p class="dtInvalida" id="dtInvFebreDose1">Data inválida</p>
+                        </div>
+                        <div class="btMarcaHorario">
+                            <button type="button" id="marcaDataFebreDose1">Escolher data</button>
+                        </div>
+                    </div>
+                    <div class="divDataDeRef"><p class="dataDeReforço" id="dataDeReforcoFebreAmarela">DATA DE REFORÇO: {{dt_febreAmarelaDose10Anos}}</p></div>
+                    <div class="divDaVacina">
+                        <p class="nomeDaVacina" id="respFebre">FEBRE AMARELA</p>
+                        <button class="checkboxFake" id="ckFakeFebreDose2" type="button"></button>
+                        <input type="checkbox" class="botaoMarcaVacTomada" id="febreAmarelaDose10Anos" name="febreAmarelaDose10AnosCk" ></input>
+                        <p class="quantasDose">Dose de reforço após 10 anos</p>
+                    </div>
+                    <div class="insereHorario" id="insereHorarioFebreDose2">
+                        <div class="nomeHorario">
+                            <p>Selecione abaixo a data de aplicação da dose de reforço da vacina da Febre Amarela</p>
+                        </div>
+                        <div class="inputHorario">
+                            <input type="date" class="dataDeAplic" id="dataAtualMarcaVacFebreDose2" name="DtMFebreDose2">
+                            <p class="dtInvalida" id="dtInvFebreDose2">Data inválida</p>
+                        </div>
+                        <div class="btMarcaHorario">
+                            <button type="button" id="marcaDataFebreDose2">Escolher data</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <button class="setaFebre" id="setaFebre" type="button" title="FEBRE AMARELA"><img src="img/setaParaBaixo.png" alt=""></button>
+
+                <p class="centraliza"><label class="nomeVacinaDUPLAADULTO" for="setaDupla" id="nomeVacDupla">DUPLA ADULTO</label></p>
+                <div class="dosesDupla" id="dosesDupla">
+                    <div class="escondeDupla" id="escondeDupla">
+                    <div class="divDaVacina">
+                        <p class="nomeDaVacina" id="respDupla">DUPLA ADULTO</p>
+                        <button class="checkboxFake" id="ckFakeDuplaDose1" type="button"></button>
+                        <input type="checkbox" class="botaoMarcaVacTomada" id="duplaAdultoDose1" name="duplaAdultoDose1Ck" ></input>
+                        <p class="quantasDose">1° Dose</p>
+                    </div>
+                    <div class="insereHorario" id="insereHorarioDuplaDose1">
+                        <div class="nomeHorario">
+                            <p>Selecione abaixo a data de aplicação da primeira dose da vacina da Dupla Adulto</p>
+                        </div>
+                        <div class="inputHorario">
+                            <input type="date" class="dataDeAplic" id="dataAtualMarcaVacDuplaDose1" name="DtMDuplaDose1">
+                            <p class="dtInvalida" id="dtInvDuplaDose1">Data inválida</p>
+                        </div>
+                        <div class="btMarcaHorario">
+                            <button type="button" id="marcaDataDuplaDose1">Escolher data</button>
+                        </div>
+                    </div>
+                    <div class="divDaVacina">
+                        <p class="nomeDaVacina" id="respDupla">DUPLA ADULTO</p>
+                        <button class="checkboxFake" id="ckFakeDuplaDose2" type="button"></button>
+                        <input type="checkbox" class="botaoMarcaVacTomada" id="duplaAdultoDose2" name="duplaAdultoDose2Ck" ></input>
+                        <p class="quantasDose">2° Dose</p>
+                    </div>
+                    <div class="insereHorario" id="insereHorarioDuplaDose2">
+                        <div class="nomeHorario">
+                            <p>Selecione abaixo a data de aplicação da segunda dose da vacina da Dupla Adulto</p>
+                        </div>
+                        <div class="inputHorario">
+                            <input type="date" class="dataDeAplic" id="dataAtualMarcaVacDuplaDose2" name="DtMDuplaDose2">
+                            <p class="dtInvalida" id="dtInvDuplaDose2">Data inválida</p>
+                        </div>
+                        <div class="btMarcaHorario">
+                            <button type="button" id="marcaDataDuplaDose2">Escolher data</button>
+                        </div>
+                    </div>
+                    <div class="divDaVacina">
+                        <p class="nomeDaVacina" id="respDupla">DUPLA ADULTO</p>
+                        <button class="checkboxFake" id="ckFakeDuplaDose3" type="button"></button>
+                        <input type="checkbox" class="botaoMarcaVacTomada" id="duplaAdultoDose3" name="duplaAdultoDose3Ck" ></input>
+                        <p class="quantasDose">3° Dose</p>
+                    </div>
+                    <div class="insereHorario" id="insereHorarioDuplaDose3">
+                        <div class="nomeHorario">
+                            <p>Selecione abaixo a data de aplicação da terceira dose da vacina da Dupla Adulto</p>
+                        </div>
+                        <div class="inputHorario">
+                            <input type="date" class="dataDeAplic" id="dataAtualMarcaVacDuplaDose3" name="DtMDuplaDose3">
+                            <p class="dtInvalida" id="dtInvDuplaDose3">Data inválida</p>
+                        </div>
+                        <div class="btMarcaHorario">
+                            <button type="button" id="marcaDataDuplaDose3">Escolher data</button>
+                        </div>
+                    </div>
+                    <div class="divDataDeRef"><p class="dataDeReforço" id="dataDeReforcoDuplaAdulto">DATA DE REFORÇO: {{dt_duplaAdultoDose10Anos}}</p></div>
+                    <div class="divDaVacina">
+                        <p class="nomeDaVacina" id="respDupla">DUPLA ADULTO</p>
+                        <button class="checkboxFake" id="ckFakeDuplaDose4" type="button"></button>
+                        <input type="checkbox" class="botaoMarcaVacTomada" id="duplaAdultoDose10Anos" name="duplaAdultoDose10AnosCk" ></input>
+                        <p class="quantasDose">Dose de reforço após 10 anos</p>
+                    </div>
+                    <div class="insereHorario" id="insereHorarioDuplaDose4">
+                        <div class="nomeHorario">
+                            <p>Selecione abaixo a data de aplicação da dose de reforço da vacina da Dupla Adulto</p>
+                        </div>
+                        <div class="inputHorario">
+                            <input type="date" class="dataDeAplic" id="dataAtualMarcaVacDuplaDose4" name="DtMDuplaDose4">
+                            <p class="dtInvalida" id="dtInvDuplaDose4">Data inválida</p>
+                        </div>
+                        <div class="btMarcaHorario">
+                            <button type="button" id="marcaDataDuplaDose4">Escolher data</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <button class="setaDupla" id="setaDupla" type="button" title="DUPLA ADULTO"><img src="img/setaParaBaixo.png" alt=""></button>
+
+                <p class="centraliza"><label class="nomeVacinaGRIPE" for="setaGripe" id="nomeVacGripe">GRIPE</label></p>
+                <div class="dosesGripe" id="dosesGripe">
+                    <div class="escondeGripe" id="escondeGripe">
+                    <div class="divDaVacina">
+                        <p class="nomeDaVacina" id="respGripe">GRIPE</p>
+                        <button class="checkboxFake" id="ckFakeGripeDose1" type="button"></button>
+                        <input type="checkbox" class="botaoMarcaVacTomada" id="gripe" name="gripeCk" ></input>
+                        <p class="quantasDose">Dose Atual</p>
+                    </div>
+                    <div class="insereHorario" id="insereHorarioGripeDose1">
+                        <div class="nomeHorario">
+                            <p>Selecione abaixo a data de aplicação da dose atual da vacina da Gripe</p>
+                        </div>
+                        <div class="inputHorario">
+                            <input type="date" class="dataDeAplic" id="dataAtualMarcaVacGripeDose1" name="DtMGripeDose1">
+                            <p class="dtInvalida" id="dtInvGripeDose1">Data inválida</p>
+                        </div>
+                        <div class="btMarcaHorario">
+                            <button type="button" id="marcaDataGripeDose1">Escolher data</button>
+                        </div>
+                    </div>
+                    <div class="divDataDeRef"><p class="dataDeReforço" id="dataDeReforcoGripe">DATA DE REFORÇO: {{gripeReforco}}</p></div>
+                    <div class="divDaVacina">
+                        <p class="nomeDaVacina" id="respGripe">GRIPE</p>
+                        <button class="checkboxFake" id="ckFakeGripeDose2" type="button"></button>
+                        <input type="checkbox" class="botaoMarcaVacTomada" id="gripeReforco" name="gripeReforcoCk" ></input>
+                        <p class="quantasDose">Dose de reforço após 1 ano</p>
+                    </div>
+                    <div class="insereHorario" id="insereHorarioGripeDose2">
+                        <div class="nomeHorario">
+                            <p>Selecione abaixo a data de aplicação da dose de reforço da vacina da Gripe</p>
+                        </div>
+                        <div class="inputHorario">
+                            <input type="date" class="dataDeAplic" id="dataAtualMarcaVacGripeDose2" name="DtMGripeDose2">
+                            <p class="dtInvalida" id="dtInvGripeDose2">Data inválida</p>
+                        </div>
+                        <div class="btMarcaHorario">
+                            <button type="button" id="marcaDataGripeDose2">Escolher data</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <button class="setaGripe" id="setaGripe" type="button" title="GRIPE"><img src="img/setaParaBaixo.png" alt=""></button>
+
+                <p class="centraliza"><label class="nomeVacinaPNEUMONIA" for="setaPneu" id="nomeVacPneu">PNEUMONIA</label></p>
+                <div class="dosesPneu" id="dosesPneu">
+                    <div class="escondePneu" id="escondePneu">
+                    <div class="divDaVacina">
+                        <p class="nomeDaVacina" id="respPneu">PNEUMONIA</p>
+                        <button class="checkboxFake" id="ckFakePneuDose1" type="button"></button>
+                        <input type="checkbox" class="botaoMarcaVacTomada" id="pneumonia" name="pneumoniaCk" ></input>
+                        <p class="quantasDose">1° Dose</p>
+                    </div>
+                    <div class="insereHorario" id="insereHorarioPneuDose1">
+                        <div class="nomeHorario">
+                            <p>Selecione abaixo a data de aplicação da primeira dose da vacina da Pneumonia</p>
+                        </div>
+                        <div class="inputHorario">
+                            <input type="date" class="dataDeAplic" id="dataAtualMarcaVacPneuDose1" name="DtMPneuDose1">
+                            <p class="dtInvalida" id="dtInvPneuDose1">Data inválida</p>
+                        </div>
+                        <div class="btMarcaHorario">
+                            <button type="button" id="marcaDataPneuDose1">Escolher data</button>
+                        </div>
+                    </div>
+                    <div class="divDataDeRef"><p class="dataDeReforço" id="dataDeReforcoPneumonia">DATA DE REFORÇO: {{pneumoniaReforco}}</p></div>
+                    <div class="divDaVacina">
+                        <p class="nomeDaVacina" id="respPneu">PNEUMONIA</p>
+                        <button class="checkboxFake" id="ckFakePneuDose2" type="button"></button>
+                        <input type="checkbox" class="botaoMarcaVacTomada" id="pneumoniaReforco" name="pneumoniaReforcoCk" ></input>
+                        <p class="quantasDose">Dose de reforço após 5 anos</p>
+                    </div>
+                    <div class="insereHorario" id="insereHorarioPneuDose2">
+                        <div class="nomeHorario">
+                            <p>Selecione abaixo a data de aplicação da dose de reforço da vacina da Pneumonia</p>
+                        </div>
+                        <div class="inputHorario">
+                            <input type="date" class="dataDeAplic" id="dataAtualMarcaVacPneuDose2" name="DtMPneuDose2">
+                            <p class="dtInvalida" id="dtInvPneuDose2">Data inválida</p>
+                        </div>
+                        <div class="btMarcaHorario">
+                            <button type="button" id="marcaDataPneuDose2">Escolher data</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <button class="setaPneu" id="setaPneu" type="button" title="PNEUMONIA"><img src="img/setaParaBaixo.png" alt=""></button>
+            </div>
+
+            <input type="submit" value="Concluir alterações" class="btEnviaVacinas" id="btSubmit">
+        </form>
+        <div class="menuDeNavegacao" id="tt">
+            <nav>
+                <ul class="listaDeIcones">
+                    <li><button class="botaoDeMenuInferior" onclick="location.href='/TelaInicialDaAplicacao'"><img src="img/home.png" alt="home" title="Início" class="imgDeNavegacao"></button><div class="separa"></div><p class="descBotao" onclick="location.href='/TelaInicialDaAplicacao'">Início</p></li>
+                    <li><button class="botaoDeMenuInferior" onclick="location.href='/CadernetaDeVacinacao'"><img src="img/verificaVacina.png" alt="Verifica Vacina" title="Caderneta" class="imgDeNavegacao"></button><div class="separa"></div><p class="descBotao" onclick="location.href='/CadernetaDeVacinacao'">Caderneta</p></li>
+                    <li><button class="botaoDeMenuInferior" onclick="location.href='/CalendarioDeVacinacao'"><img src="img/calendario.png" alt="calendario" title="Calendário" class="imgDeNavegacao"></button><div class="separa"></div><p class="descBotao" onclick="location.href='/CalendarioDeVacinacao'">Calendário</p></li>
+                    <li><button class="botaoDeMenuInferior" onclick="location.href='/Historico'"><img src="img/historico.png" alt="historico" title="Histórico" class="imgDeNavegacao"></button><div class="separa"></div><p class="descBotao" onclick="location.href='/Historico'">Histórico</p></li>
+                </ul>
+            </nav>
+        </div>    
+    </body>
+</html>
+
+
+

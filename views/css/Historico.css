@@ -1,0 +1,223 @@
+body{
+    background: #e3e4e3;
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+}
+
+header{
+    background-color:#057fb7;
+    height: 15vh;
+    width: 100%;
+}
+.easyvacMenor{
+    margin-top: 2.5vh;
+    position: relative;
+    margin-left: 0%;
+    height: 80%;
+    width: 40%;
+}
+.botaoSair{
+    margin-top: 5vh;
+    width: 10vmax;
+    height: 40%;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    position: relative;
+    float: right;
+    align-items: center;
+    text-align: center;
+    font-size: calc(1vh + 1vw);
+    display: flex;
+    border: 0%;
+    padding: 0%;
+    letter-spacing: 0.5vw;
+}
+.botaoSair p{
+    font-weight: bold;
+    width: 100%;    
+}
+.divHistoricoVacInf{
+    text-align: center;
+    margin-top: 4vmax;
+}
+.historicoVacInf{
+    color: #06159b;
+    font-size: clamp(2vw, 4.5vh, 4.5vw);
+    font-weight: bold;
+    margin: 0%;
+}
+.infHistoricoVac{
+    color: #686868;
+    font-size: clamp(1.5vw, 2.5vh, 2.5vw);
+    margin: 0%;
+}
+.divInfHistoricoVac{
+    margin-left: 20%;
+    margin-right: 19%;
+    word-spacing: 0.5vmax;
+    text-align: center;
+    margin-top: 1vmax;
+}
+.historicoVac{
+    margin-left: 20%;
+    margin-top: 2%;
+}
+.nomeVacina{
+    color: #06159b;
+    font-weight: bold;
+    font-size: clamp(1vh, 2vw, 3vh);
+    margin-top: 1vh;
+    
+}
+.dataDaAplicacao{
+    color: #15b8b8;
+    font-weight: bold;
+    border: 2px solid #057FB7;
+    margin-top: 1.5vh;
+    margin-right: 22%;
+    height: 3vmin;
+    border-radius: 5px;
+    padding: 2.5vmin;
+    font-size: clamp(1vh, 2vw, 3vh);
+}
+
+li{
+    list-style-type: none;
+    display: inline-block;
+    height: 100%;
+    width: 13vw;
+    text-align: center;
+    margin-left: 5vw;
+}
+
+.listaDeIcones{
+    background-color: #057fb7;
+    border-radius: 10px 10px 0px 0px;
+    height: 100%;
+    padding: 0%;
+    margin: 0%;
+}
+.botaoDeMenuInferior{
+    background-color: #057fb7;
+    border-color: orange;
+    height: 60%;
+    margin-top: 3vh;
+    cursor: pointer;
+}
+.imgDeNavegacao{
+    height: 90%;
+    width: 90%;
+    margin-top: 0.5vmin;
+}
+.menuDeNavegacao{
+    margin-top: 3vh;
+    margin-left: 10%;
+    margin-right: 11%;
+    height: 17vh;
+}
+.menuDeNavegacao nav{
+    height: 100%;
+}
+
+.imprimirHistorico{
+    margin-top: 7vh;
+    margin-left: calc(25vw + 12%);
+    width: 25vw;
+    height: 3.5vmax;
+    border-radius: 10px;
+    background-color: #ec8c14;
+    font-weight: bold;
+    font-size: 2.5vmin;
+    color: #06567b;
+    cursor: pointer;
+    padding: 0%;
+}
+
+.infbotaoMenu{
+    margin: 0% 0% 0% 0%;
+    padding: 0%;
+    height: calc(40% - 3vh);
+}
+.descBotao{
+    cursor: pointer;
+    color: orange;
+    font-weight: bold;
+    font-size: clamp(1.2vw, 2.5vh, 3vw);
+    padding-top: 0%;
+    margin: 0% 0% 0% 0%;
+}
+
+.separa{
+    height: 1%;
+}
+
+.ImpressaoEasyvac{
+    display: none;
+}
+@media print {
+    html, body {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    #printable {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 14px;
+    }
+    #printable ~ * {
+        display: none;
+    }
+    .menuDeNavegacao{
+        display: none;
+    }
+    .botaoSair{
+        display: none;
+    }
+    .imprimirHistorico{
+        display: none;
+    }
+    header{
+        display: none;
+    }
+    .divInfHistoricoVac{
+        display: none;
+    }.divHistoricoVacInf{
+        height: 50px;
+    
+    }
+    .dataDaAplicacao{
+        border-color: black;
+        color: black;
+        height: 20px;
+    }
+    .historicoVacInf{
+        display: inline;
+        font-size: 35px;
+        color:  black;
+    }
+    .ImpressaoEasyvac{
+        display: inline;
+    }
+    .nomeVacina{
+        color: black;
+        font-size: 20px;
+        margin-top: 0px;
+    }
+    #tetraDose2{
+        margin-top: 110px;
+        padding-top: 50px;
+    }
+    #duplaDose1Print{
+        margin-top: 110px;
+        padding-top: 50px;
+    }
+    @page{
+        size: portrait;
+        margin: 0mm
+    }
+}

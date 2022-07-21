@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang=”pt-br”>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/Codigo.css">
+        <script src="JavaScript/Codigo.js" defer></script>
+    </head>
+
+    <body onload="atualiza({{mesmoCodigo}})">
+        <header>
+            <img src="img/easyvac.png" alt="easyvac logo" class="easyvacLogo">
+        </header>
+        <div class="ValidacaoEmail">
+            <div class="div1"><p class="informacao">Para prosseguir com a mudança de sua senha, insira abaixo o código de 6 dígitos 
+                que foi enviado para o e-mail informado anteriormente
+            </p></div>
+            <form action="ValidaCodigo" method="POST">
+                <div 
+                    class="div2"><input type="number" id="campoDoNumero" name="numeroDoUsuarioSenha" class="localNumero" placeholder="Insira o código aqui" min="1" max="999999">
+                    <p class="numeroDigitado" id="numeroDigitadoID">O número digitado não corresponde ao enviado para o e-mail</p>
+                </div>
+                <div class="div3"><input type="submit" value="Confirmar Código" class="concluirCadastro"></div>
+            </form>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,565 @@
+body, html{
+    background: #e3e4e3;
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+}
+header{
+    background-color:#057fb7;
+    height: 15%; 
+    width: 100%;
+    
+}
+.easyvacMenor{
+    margin-top: 2.5vh;
+    position: relative;
+    margin-left: 0%;
+    height: 80%;
+    width: 40%;
+}
+.botaoSair{
+    margin-top: 5vh;
+    width: 10vmax;
+    height: 40%;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    position: relative;
+    float: right;
+    align-items: center;
+    text-align: center;
+    font-size: calc(1vh + 1vw);
+    display: flex;
+    border: 0%;
+    padding: 0%;
+    letter-spacing: 0.5vw;
+}
+.botaoSair p{
+    font-weight: bold;
+    width: 100%;    
+}
+
+.divcalendVacInf{
+    text-align: center;
+    height: 6vmin;
+    margin-top: 4vmax;
+}
+.calendVacInf{
+    color: #06159b;
+    font-size: clamp(2vw, 4.5vh, 4.5vw);
+    font-weight: bold;
+    margin: 0;
+}
+.infCalendVac{
+    color: #686868;
+    font-size: clamp(1.5vw, 2.5vh, 2.5vw);
+    margin: 0%;
+}
+.divInfCalendVac{
+    margin-left: 20%;
+    margin-right: 19%;
+    word-spacing: 0.5vmax;
+    text-align: justify;
+    height: calc(6% + 1.5vmax);
+}
+.selecAFaixaEtariaText{
+    font-weight: bold;
+    color: #404040;
+    font-size: clamp(2vw, 3.2vh, 3.2vw);
+    text-align: center;
+    word-spacing: 1vmin;
+    margin: 0%;
+    height: 6vmin;
+    margin-top: 4vmin;
+}
+
+.opcoesFaixaEtaria{
+    height: 10vmin;
+    margin-left: 20%;
+    margin-right: 19%;
+}
+.opcoesFaixaEtaria nav{
+    height: 100%;
+    margin: 0%;
+}
+.botaoFaixaEtaria{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    white-space: pre-wrap;
+    line-height: 10px;
+    background-color: #a8a8a2;
+    cursor: pointer;
+    padding: 0%;
+    font-size: 1.7vw;
+    line-height: 1vw;
+    word-spacing: 0.2vmax;
+}
+.ulBotaoFaixaEtaria{
+   height: 100%;
+   padding-left: 0%;
+   margin: 0%;
+}
+.ulBotaoFaixaEtaria li{
+    list-style-type: none;
+    height: 100%;
+    width: 24%; 
+    text-align: center;
+    margin-left: 1.3%; 
+    float:left;
+    padding: 0%;
+    display: inline;
+}
+.ulBotaoFaixaEtaria li:nth-child(1){
+    margin-left: 0%;
+}
+
+.vacinas{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.8vmax;
+    color: #404040;
+    height: 4%;
+    margin-top: 4vmin;
+    margin-bottom: 0%;
+}
+
+.vacinasCriança{
+    margin-left: 20%;
+    margin-right: 18%;
+    display: none;
+    position: relative;
+}
+.idadeDeTomarCrianca{
+    font-weight: bold;
+    color: #06159b;
+    font-size: clamp(2vw, 2vh, 3.5vw);
+}
+
+.nomeVac{
+    color: white;
+    margin-left: 2%;
+    margin-bottom: 0%;
+    padding-top: 1.6vmin;
+    font-weight: bold;
+    width: 82%;
+}
+.quantasDose{
+    margin-top: 0.4vmin;
+    color: #06159b;
+    margin-left: 2%;
+    font-size: clamp(1vw, 1.5vh, 2vw);
+    font-weight: bold;
+    width: 82%;
+}
+.BCG{
+    background-color: #72b6d6;
+    height: 5vmax;
+}#respBCG{
+    font-size: clamp(1.2vw, 3.6vh, 2.2vw);
+}
+.HepatiteB{
+    background-color: #72b6d6;
+    height: 5vmax; 
+}#respHepB{
+    font-size: clamp(1.6vw, 3vh, 1.8vw);
+}
+.Poliomielite{
+    background-color: #72b6d6;
+    height: 5vmax;
+}#respPolio{
+    font-size:  clamp(1.3vw, 3.2vh, 1.7vw);
+}
+.TetraValente{
+    background-color: #72b6d6;
+    height: 5vmax;
+}#respTetra{
+    font-size: clamp(1vw, 2.9vh, 1.5vw);
+}
+.TripliciViral{
+    background-color: #72b6d6;
+    height: 5vmax;
+}#respTriplice{
+    font-size: clamp(0.8vw, 3vh, 1.7vw);
+}
+.FebreAmarela{
+    background-color: #72b6d6;
+    height: 5vmax;
+}#respFebre{
+    font-size:  clamp(1vw, 3vh, 1.6vw);
+}
+.informacoesVacBut{
+    background-color: white;
+    float: right;
+    border-radius: 100%;
+    cursor: pointer;
+    height: 1.4vw;
+    width: 1.4vw;
+    border: 0ch;
+    padding: 0%;
+    margin-top: -3.5%;
+    margin-right: 12%;
+    display: inline;
+}
+.informacoesVacBut img{
+    width: 90%; 
+    margin: auto;
+    display: block;
+    max-width: 100%;
+}
+.informacoesVacButNome{
+    color: white;
+    float: right;
+    cursor: pointer;
+    margin-top: -3.5%;
+    font-size: 1.2vw;
+    padding: 0%;
+    display: inline;
+    width: 7vw;
+}
+.vacinasAdolecente{
+    margin-left: 20%;
+    margin-right: 18%;
+    display: none;
+}
+.idadeDeTomarAdolecente{
+    font-weight: bold;
+    color: #06159b;
+    font-size: clamp(2vw, 2vh, 3.5vw);
+}
+.duplaAdulta{
+    background-color: #72b6d6;
+    height: 5vmax;
+}#respDuplaAdult{
+    font-size:  clamp(1vw, 3vh, 1.6vw);
+}
+.febreAmarelaAdolecente{
+    background-color: #72b6d6;
+    height: 5vmax;
+}
+.hepatiteBAdolecente{
+    background-color: #72b6d6;
+    height: 5vmax;
+}
+.duplaViral{
+    background-color: #72b6d6;
+    height: 5vmax;
+}#respDuplaViral{
+    font-size:  clamp(1vw, 3vh, 1.6vw);
+}
+.vacinasAdulto{
+    margin-left: 20%;
+    margin-right: 18%;
+    display: none;  
+}
+.idadeDeTomarHomens{
+    font-weight: bold;
+    color: #06159b;
+    font-size: clamp(2vw, 2vh, 3.5vw);
+}
+.duplalAdulto{
+    background-color: #72b6d6;
+    height: 5vmax; 
+}
+.febreAmarelaAdulto{
+    background-color: #72b6d6;
+    height: 5vmax;
+}
+.idadeDeTomarMulheres{
+    font-weight: bold;
+    color: #06159b;
+    font-size: clamp(2vw, 2vh, 3.5vw);
+}
+
+.vacinasIdoso{
+    margin-left: 20%;
+    margin-right: 18%;
+    display: none;    
+}
+.idadeDeTomarIdoso{
+    font-weight: bold;
+    color: #06159b;
+    font-size: clamp(2vw, 2vh, 3.5vw);
+}
+.influenza{
+    background-color: #72b6d6;
+    height: 5vmax; 
+}#respGripe{
+    font-size: clamp(1vw, 3vh, 1.6vw);
+}
+.pneumonia{
+    background-color: #72b6d6;
+    height: 5vmax;  
+}#respPneuMonia{
+    font-size: clamp(1vw, 3vh, 1.6vw);
+}
+
+.infBCG{
+    margin-left: 15%;
+    margin-right: 13%;
+    border-radius: 2vmax;
+    display: none;
+    position: relative; 
+    background-color: #fcc474;
+    font-size: clamp(1.5vw, 2.5vh, 3.5vw);
+}
+.NomeVacina{
+    text-align: center;
+    color:#057fb7;
+    font-size: clamp(1.8vw, 2.8vh, 3.8vw);
+    font-weight: bold;
+    padding-top: 1%;
+    margin: 0%;
+    height: 3vmax;
+}
+.titulo{
+    margin-left: 10px;
+    color: #06567b;
+    font-weight: bold;
+}
+.descricao{
+    color: #1c357a;
+    text-align: left;
+    margin-left: 10px;
+    margin-top: -10px;
+    padding: 5px 10px;
+}
+.botaoFechar{
+    border-radius: 100%;
+    cursor: pointer;
+    float: right;
+    margin-right: 1vmax;
+    margin-top: -3vmax;    
+    height: 2.5vmax;
+    width: 2.5vmax;
+    background-color: white;
+}.botaoFechar img{
+    width: 90%; 
+    margin: auto;
+    display: block;
+    max-width: 100%;
+    background-color: white;
+}
+.infHepatiteB{
+    margin-left: 15%;
+    margin-right: 13%;
+    border-radius: 2vmax;
+    display: none;
+    position: relative;
+    background-color: #fcc474;
+    font-size: clamp(1.5vw, 2.5vh, 3.5vw);
+}
+.infPoliomielite{
+    margin-left: 15%;
+    margin-right: 13%;
+    border-radius: 2vmax;
+    display: none;
+    position: relative;
+    background-color: #fcc474;
+    font-size: clamp(1.5vw, 2.5vh, 3.5vw);
+}
+.infTetraValente{
+    margin-left: 15%;
+    margin-right: 13%;
+    border-radius: 2vmax;
+    display: none;
+    position: relative;
+    background-color: #fcc474;
+    font-size: clamp(1.2vw, 2.2vh, 3.2vw);
+}
+.infFebreAmarela{
+    margin-left: 15%;
+    margin-right: 13%;
+    border-radius: 2vmax;
+    display: none;
+    position: relative;
+    background-color: #fcc474;
+    font-size: clamp(1.5vw, 2.5vh, 3.5vw);
+}
+.infTripliceViral{
+    margin-left: 15%;
+    margin-right: 13%;
+    border-radius: 2vmax;
+    display: none;
+    position: relative;
+    background-color: #fcc474;
+    font-size: clamp(1.5vw, 2.5vh, 3.5vw);
+}
+.infFebreAmarelaAd{
+    margin-left: 15%;
+    margin-right: 13%;
+    border-radius: 2vmax;
+    display: none;
+    position: relative;
+    background-color: #fcc474;
+    font-size: clamp(1.5vw, 2.5vh, 3.5vw);  
+}
+.infHepatiteBAd{
+    margin-left: 15%;
+    margin-right: 13%;
+    border-radius: 2vmax;
+    display: none;
+    position: relative;
+    background-color: #fcc474;
+    font-size: clamp(1.5vw, 2.5vh, 3.5vw);
+}
+.infDuplaAdultoAdolecente{
+    margin-left: 15%;
+    margin-right: 13%;
+    border-radius: 2vmax;
+    display: none;
+    position: relative;
+    background-color: #fcc474;
+    font-size: clamp(1.5vw, 2.5vh, 3.5vw);
+}
+.infDuplaViralAdolecente{
+    margin-left: 15%;
+    margin-right: 13%;
+    border-radius: 2vmax;
+    display: none;
+    position: relative;
+    background-color: #fcc474;
+    font-size: clamp(1.5vw, 2.5vh, 3.5vw);
+}
+
+.infDuplaAdultoAdulto{
+    margin-left: 15%;
+    margin-right: 13%;
+    border-radius: 2vmax;
+    display: none;
+    position: relative;
+    background-color: #fcc474;
+    font-size: clamp(1.5vw, 2.5vh, 3.5vw);
+}
+.infDuplaViralAdulto{
+    margin-left: 15%;
+    margin-right: 13%;
+    border-radius: 2vmax;
+    display: none;
+    position: relative;
+    background-color: #fcc474;
+    font-size: clamp(1.5vw, 2.5vh, 3.5vw);
+}
+.infFebreAmarelaAdulto{
+    margin-left: 15%;
+    margin-right: 13%;
+    border-radius: 2vmax;
+    display: none;
+    position: relative;
+    background-color: #fcc474;
+    font-size: clamp(1.5vw, 2.5vh, 3.5vw);
+}
+.infDuplaAdultoAdultoMulheres{
+    margin-left: 15%;
+    margin-right: 13%;
+    border-radius: 2vmax;
+    display: none;
+    position: relative;
+    background-color: #fcc474;
+    font-size: clamp(1.5vw, 2.5vh, 3.5vw);
+}
+.infDuplaViralAdultoMulheres{
+    margin-left: 15%;
+    margin-right: 13%;
+    border-radius: 2vmax;
+    display: none;
+    position: relative;
+    background-color: #fcc474;
+    font-size: clamp(1.5vw, 2.5vh, 3.5vw);
+}
+.infFebreAmarelaAdultoMulheres{
+    margin-left: 15%;
+    margin-right: 13%;
+    border-radius: 2vmax;
+    display: none;
+    position: relative;
+    background-color: #fcc474;
+    font-size: clamp(1.5vw, 2.5vh, 3.5vw);
+}
+.infInfluenza{
+    margin-left: 15%;
+    margin-right: 13%;
+    border-radius: 2vmax;
+    display: none;
+    position: relative;
+    background-color: #fcc474;
+    font-size: clamp(1.5vw, 2.5vh, 3.5vw);
+}
+.infPneumonia{
+    margin-left: 15%;
+    margin-right: 13%;
+    border-radius: 2vmax;
+    display: none;
+    position: relative;
+    background-color: #fcc474;
+    font-size: clamp(1.5vw, 2.5vh, 3.5vw); 
+}
+.infDuplaAdultoIdoso{
+    margin-left: 15%;
+    margin-right: 13%;
+    border-radius: 2vmax;
+    display: none;
+    position: relative;
+    background-color: #fcc474;
+    font-size: clamp(1.5vw, 2.5vh, 3.5vw);
+}
+li{
+    list-style-type: none;
+    display: inline-block;
+    height: 100%;
+    width: 13vw;
+
+    text-align: center;
+    margin-left: 5vw;
+}
+
+.listaDeIcones{
+    background-color: #057fb7;
+    border-radius: 10px 10px 0px 0px;
+    height: 100%;
+    padding: 0%;
+    margin: 0%;
+
+}
+.botaoDeMenuInferior{
+    background-color: #057fb7;
+    border-color: orange;
+    height: 60%;
+    margin-top: 3vh;
+    cursor: pointer;
+}
+.imgDeNavegacao{
+    height: 90%;
+    width: 90%;
+    margin-top: 0.5vmin;
+}
+#invisivel{
+    height: calc(100% - 17vh - 4% - 10vmin - 6vmin - 6% - 6vmin - 15% - 5.5vmax - 4vmin - 4vmin);
+}
+.menuDeNavegacao{
+    margin-left: 10%;
+    margin-right: 11%;
+    height: 17vh;
+}
+.menuDeNavegacao nav{
+    height: 100%;
+}
+
+.infbotaoMenu{
+    margin: 0% 0% 0% 0%;
+    padding: 0%;
+    height: calc(40% - 3vh);
+}
+.descBotao{
+    cursor: pointer;
+    color: orange;
+    font-weight: bold;
+    font-size: clamp(1.2vw, 2.5vh, 3vw);
+    padding-top: 0%;
+    margin: 0% 0% 0% 0%;
+}
+
+.separa{
+    height: 1%;
+}
