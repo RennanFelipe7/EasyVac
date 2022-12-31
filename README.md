@@ -31,4 +31,4 @@ Projeto desenvolvido para o meu Trabalho de Conclusão de Curso (TCC), no qual o
 🔹 Nodemailer<br>
 🔹 Node-shedule<br>
 
-### O deploy do projeto inicialmente foi feito na Heroku, por motivos nas mudanças dos planos da mesma, o deploy foi feito na Hailway, o EasyVac pode ser acessado atraves deste link: https://easyvac.up.railway.app/login
+### O deploy do projeto inicialmente foi feito na Heroku, por motivos de mudanças nos planos da mesma, o deploy foi feito na Railway, o EasyVac pode ser acessado atraves deste link: https://easyvac.up.railway.app/login
